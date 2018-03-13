@@ -1,9 +1,11 @@
-<div>
-<h1>{{$room->street}}, {{$room->housenumber}}</h1>
-<h1>{{$room->city->name}}, {{$room->postcode}}</h1>
-<h1>{{$room->square_meter}} m<sup>2</sup></h1>
-<h1>{{$room->price}} € p/m</h1>
-<h1>Aanbieder: {{$room->user->name}}</h1>
-<p><strong>{{$room->created_at}}</strong></p>
-<hr>
+<div class="row">
+  <div class="card">
+    <div class="card-text">
+<h3>{{$room->street}}, {{$room->housenumber}}</h3>
+<h3>{{$room->city->name}}, {{$room->postcode}}</h3>
+<h3>{{$room->square_meter}} m<sup>2</sup></h3>
+<h3>{{$room->price}} € p/m</h3>
+<h3>Aanbieder: {{$room->user->name}}</h3>
+<p>{{$room->created_at}}</p>
+</div>
 </div>
