@@ -1,8 +1,7 @@
-<div class="nav">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">Hoe werkt het</a></li>
-    <li><a href="aanbod.html">Kamer aanbod</a></li>
-    <li><a href="storing.html">Storing melden</a></li>
-  </ul>
-</div>
+<div class="navbar navbar-inverse bg-inverse">
+  <div class="container d-flex justify-content-between">
+    <a href="#" class="navbar-brand">Home</a>
+    <a href="#" class="navbar-brand">Hoe werkt het?</a>
+    <a href="#" class="navbar-brand">Kamer aanbod</a>
+    <a href="#" class="navbar-brand">Storing melden</a>
+  </div>
