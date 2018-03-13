@@ -15,6 +15,8 @@ class CreateTableRooms extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('street');
+            $table->integer('housenumber');
             $table->integer('city_id');
             $table->string('postcode');
             $table->integer('square_meter');
