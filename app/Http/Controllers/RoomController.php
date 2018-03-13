@@ -27,7 +27,7 @@ class RoomController extends Controller
         'user_id' => auth()->id(),
       ]);
       return redirect('/dashboard')
-      ->with('success','Blogpost posted successfully');;
+      ->with('success','Nieuwe kamer geplaatst!');;
     }
 
     public function test(){
