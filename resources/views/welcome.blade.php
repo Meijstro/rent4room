@@ -78,11 +78,16 @@
             @endif
 
             <div class="content">
+
+                @include('layouts.nav')
+                
                 <div class="title m-b-md">
                     Room4Rent
                 </div>
 
                 @include('layouts.rooms')
+
+                @include('layouts.footer')
 
             </div>
         </div>
