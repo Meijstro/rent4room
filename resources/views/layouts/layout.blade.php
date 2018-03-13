@@ -22,7 +22,6 @@
 
     <section class="jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading">Room4Rent</h1>
         <p class="lead text-muted">Ga je studeren in de mooiste studentenstad, schrijf je dan nu gratis in op onze website en vind de woonruimte die bij je past. </p>
         <p>
           <a href="{{ route('register') }}" class="btn btn-primary">Schrijf je nu in!</a>

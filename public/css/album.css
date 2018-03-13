@@ -9,6 +9,10 @@ body {
   background-color: #008e5a;
   font-family: verdana;
 }
+.navbar-brand:hover {
+  background-color: #008e5a;
+  border-radius: 4px;
+}
 
 .jumbotron {
   padding-top: 6rem;
