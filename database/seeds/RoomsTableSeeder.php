@@ -36,8 +36,8 @@ class RoomsTableSeeder extends Seeder
           'square_meter' => '21',
           'price' => '400',
           'user_id' => '2',
-          'created_at' => '2018-01-01 10:10:00',
-          'updated_at' => '2018-01-01 10:10:00',
+          'created_at' => '2018-01-01 10:20:00',
+          'updated_at' => '2018-01-01 10:20:00',
       ]);
     }
 }
