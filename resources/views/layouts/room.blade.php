@@ -9,3 +9,4 @@
 <p>{{$room->created_at}}</p>
 </div>
 </div>
+</div>

@@ -16,4 +16,4 @@
              Woensdag 8.30 – 17.00 <br>
              Donderdag 8.30 – 17.00 <br>
              Vrijdag 8.30 – 17.00 <br>
-      </div>
+</div>
