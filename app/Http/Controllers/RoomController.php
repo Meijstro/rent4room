@@ -8,17 +8,29 @@ use App\User;
 
 class RoomController extends Controller
 {
-    public function show(){
-
-      $rooms = Room::all();
-
-      return view('layouts.room', compact('rooms'));
-    }
-
     public function index()
     {
-      $rooms = Room::all();
+      $rooms = Room::latest('created_at')->get();
 
       return view('welcome', compact('rooms'));
+    }
+
+    public function create()
+    {
+      $room = Room::create([
+        'street' => request('street'),
+        'housenumber' => request('housenumber'),
+        'city_id' => request('city_id'),
+        'postcode' => request('postcode'),
+        'square_meter' => request('square_meter'),
+        'price' => request('price'),
+        'user_id' => auth()->id(),
+      ]);
+      return redirect('/dashboard')
+      ->with('success','Blogpost posted successfully');;
+    }
+
+    public function test(){
+
     }
 }

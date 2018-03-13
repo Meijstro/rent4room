@@ -13,6 +13,10 @@
 
 Route::get('/', 'RoomController@index');
 
+Route::get('/test', 'RoomController@test');
+
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@dashboard')->name('home');
+
+Route::post('/newroom', 'RoomController@create');
