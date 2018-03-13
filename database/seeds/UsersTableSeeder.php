@@ -18,6 +18,12 @@ class UsersTableSeeder extends Seeder
          'email' => 'admin@admin.com',
          'password' => bcrypt('admin'),
      ]);
+     DB::table('users')->insert([
+         'name' => 'TestVerhuur',
+         'role' => 'Verhuurder',
+         'email' => 'verhuur@test.com',
+         'password' => bcrypt('verhuurder'),
+     ]);
    }
 
 

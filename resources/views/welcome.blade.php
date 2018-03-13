@@ -22,7 +22,7 @@
             }
 
             .full-height {
-                height: 100vh;
+                /* height: 100vh; */
             }
 
             .flex-center {
@@ -61,6 +61,7 @@
 
             .m-b-md {
                 margin-bottom: 30px;
+                margin-top: 10px;
             }
         </style>
     </head>
@@ -81,9 +82,9 @@
                 <div class="title m-b-md">
                     Room4Rent
                 </div>
-
-                @include('layouts.rooms')
-
+                @foreach ($rooms as $room)
+                  @include('layouts.room')
+                @endforeach
             </div>
         </div>
     </body>

@@ -9,6 +9,16 @@ use App\User;
 class RoomController extends Controller
 {
     public function show(){
-      return view('rooms');
+
+      $rooms = Room::all();
+
+      return view('layouts.room', compact('rooms'));
+    }
+
+    public function index()
+    {
+      $rooms = Room::all();
+
+      return view('welcome', compact('rooms'));
     }
 }
