@@ -10,13 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//homepage
 Route::get('/', 'RoomController@index');
 
-Route::get('/test', 'RoomController@test');
-
+//registratie, login
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@dashboard')->name('home');
 
+//kamer plaatsen
 Route::post('/newroom', 'RoomController@create');
+
+Route::post('/newroom/foto', 'RoomController@upload');
+
+//Administrator, testing
+Route::get('/phpinfo', 'AdminController@phpinfo');
+
+Route::get('/test', 'AdminController@test');

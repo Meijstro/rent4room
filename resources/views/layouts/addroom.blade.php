@@ -1,4 +1,5 @@
 <h2> Plaats een nieuwe kamer</h2><br>
+@include('layouts.uploadfoto')
 <form action="/newroom" method="POST">
   {{ csrf_field() }}
   <div class="form-group">
