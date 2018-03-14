@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Room;
 use App\User;
+use App\City;
 
 class RoomController extends Controller
 {

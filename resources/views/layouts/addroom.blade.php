@@ -12,7 +12,11 @@
 
   <div class="form-group">
     <label for="city">Selecteer stad</label> <br>
-  <input type="text" class="form-control" name="city_id">
+    <select name="city_id">
+      @foreach ($cities as $city)
+        <option value="{{$city->id}}">{{$city->name}}</option>
+      @endforeach
+    </select>
   </div>
 
   <div class="form-group">

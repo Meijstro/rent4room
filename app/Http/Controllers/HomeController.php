@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Room;
-use App\User;
+use \App\Room;
+use \App\City;
 
 class HomeController extends Controller
 {
@@ -25,7 +25,9 @@ class HomeController extends Controller
      */
     public function dashboard()
     {
-        return view('dashboard');
+        $cities = City::get();
+
+        return view('dashboard', compact('cities'));
     }
 
 }
