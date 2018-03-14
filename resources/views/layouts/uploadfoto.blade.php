@@ -9,9 +9,9 @@
 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
   <form action="/newroom/foto" method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
-    Selecteer foto:
-    <input type="file" name="image" id="image">
-    <input type="submit" value="Upload Foto" name="submit">
+    Selecteer foto's:<br>
+    <input type="file" id="image" name="images[]"><br>
+    <input type="submit" value="Upload" name="submit"><br>
 </form>
 <hr>
 </div>

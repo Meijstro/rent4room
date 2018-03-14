@@ -1,5 +1,5 @@
 <h2> Plaats een nieuwe kamer</h2><br>
-@include('layouts.uploadfoto')
+
 <form action="/newroom" method="POST">
   {{ csrf_field() }}
   <div class="form-group">
@@ -33,5 +33,9 @@
  <label class="form-check-label" for="price">Huurprijs per maand (in Euro)</label><br>
  <input type="text" class="form-control" name="price" id="price" placeholder="bijv. 300" value="{{ old('price') }}">
  </div>
+ <div class="form-group">
+ Selecteer foto's:<br>
+ <input type="file" id="image" name="images[]"><br>
+</div>
   <button type="submit" class="btn btn-success">Plaats Kamer</button>
 </form>
