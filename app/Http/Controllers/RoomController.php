@@ -15,8 +15,18 @@ class RoomController extends Controller
       return view('welcome', compact('rooms'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
+
+      $this->validate(request(), [
+        'street' => 'required',
+        'housenumber' => 'required',
+        'city_id' => 'required',
+        'postcode' => 'required',
+        'square_meter' => 'required',
+        'price' => 'required',
+      ]);
+
       $room = Room::create([
         'street' => request('street'),
         'housenumber' => request('housenumber'),
@@ -27,7 +37,7 @@ class RoomController extends Controller
         'user_id' => auth()->id(),
       ]);
       return redirect('/dashboard')
-      ->with('success','Blogpost posted successfully');;
+      ->with('success','Nieuwe kamer geplaatst!');;
     }
 
     public function test(){
