@@ -2,21 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
+use App\Http\Requests\UploadRequest;
 use App\Room;
 use App\User;
 use App\City;
+use App\PhotosRoom;
 
 class RoomController extends Controller
 {
     public function index()
     {
-      $rooms = Room::latest('created_at')->get();
+      $rooms = Room::latest('created_at')->with('photo')->get();
 
       return view('welcome', compact('rooms'));
     }
 
-    public function create(Request $request)
+    public function create(UploadRequest $request)
     {
 
       $this->validate(request(), [
@@ -26,6 +29,7 @@ class RoomController extends Controller
         'postcode' => 'required',
         'square_meter' => 'required',
         'price' => 'required',
+        'images' => 'required',
       ]);
 
       $room = Room::create([
@@ -37,21 +41,19 @@ class RoomController extends Controller
         'price' => request('price'),
         'user_id' => auth()->id(),
       ]);
+
+        foreach ($request->images as $image){
+          $filename = $image->store('public');
+            PhotosRoom::create([
+                'room_id' => $room->id,
+                'filename' => Storage::url($filename)
+            ]);
+        }
+
+        // die(Room::findOrFail($room->id)->with('photo')->get());
+
       return redirect('/dashboard')
       ->with('success','Nieuwe kamer geplaatst!');;
     }
 
-    public function upload(){
-
-        request()->validate([
-          'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-          ]);
-
-        $imageName = time().'.'.request()->image->getClientOriginalExtension();
-        request()->image->move(public_path('images'), $imageName);
-
-        return redirect('/dashboard')
-          ->with('success','Foto succesvol ge-upload.')
-          ->with('image',$imageName);
-    }
 }

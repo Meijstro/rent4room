@@ -21,8 +21,6 @@ Route::get('/dashboard', 'HomeController@dashboard')->name('home');
 //kamer plaatsen
 Route::post('/newroom', 'RoomController@create');
 
-Route::post('/newroom/foto', 'RoomController@upload');
-
 //Administrator, testing
 Route::get('/phpinfo', 'AdminController@phpinfo');
 

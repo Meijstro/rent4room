@@ -26,4 +26,8 @@ class Room extends Model
     return $this->belongsTo(City::class);
   }
 
+  public function photo(){
+    return $this->hasMany(PhotosRoom::class);
+  }
+
 }

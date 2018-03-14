@@ -1,6 +1,9 @@
 <div class="row">
   <div class="card">
     <div class="card-text">
+      @if ($room->photo || $room->photo > 0)
+        <img src="{{asset($room->photo->first()['filename'])}}">
+      @endif
 <h3>{{$room->street}}, {{$room->housenumber}}</h3>
 <h3>{{$room->city->name}}, {{$room->postcode}}</h3>
 <h3>{{$room->square_meter}} m<sup>2</sup></h3>
