@@ -1,28 +1,32 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
+<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/album.css" rel="stylesheet">
-        <title>Laravel</title>
+        <title>Room4Rent</title>
 
-    </head>
-    <body>
+</head>
+<body>
 
-                <div class="content">
+
 
                 @include('layouts.nav')
+    <div class="welcome">
 
-                <div class="title m-b-md">
-                </div>
+        <a href="/kamers" class="button2">Bekijk het actuele kamer aanbod!</a>
 
-                @include('layouts.layout')
+        <p>Ga je studeren in de mooiste studentenstad, schrijf je dan nu <br>
+          gratis in op onze website en vind de woonruimte die bij je past. </p>
 
-                <div class="footer">
+        <a href="{{ route('register') }}" class="button1">Schrijf je nu gratis in!</a>
+
+    </div>
+
+
                 @include('layouts.footer')
-                </div>
-            </div>
-        </div>
-    </body>
+
+
+</body>
 </html>
