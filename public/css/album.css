@@ -40,10 +40,30 @@ li a:hover {
     border:1px;
     font-size: 20px;
     text-align: center;
-    margin-left: 20%;
+    margin-left: 10%;
     text-decoration: none;
 }
 .button1:hover{
+    background-color: #d54d7b;
+    color: white;
+}
+.button2{
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 6px 6px 5px;
+    -webkit-box-shadow: 6px 6px 5px #999;
+    -moz-box-shadow: 6px 6px 5px #999;
+    background: #008e5a;
+    color: white;
+    font-family: verdana;
+    border-radius: 10px;
+    border:1px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 70%;
+    text-decoration: none;
+}
+.button2:hover{
     background-color: #d54d7b;
     color: white;
 }
@@ -52,11 +72,10 @@ li a:hover {
     background-image:url("/Groningen.jpg");
     background-size: 1600px 458px;
     background-repeat:no-repeat;
-    margin-top: -1%;
 }
 .welcome p {
-  margin-left: 8%;
-  padding-top: 5%;
+  margin-left: 10%;
+  padding-top: 10%;
   padding-bottom: 2%;
   color: white;
   font-family: verdana;
