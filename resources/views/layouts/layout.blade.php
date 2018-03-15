@@ -25,8 +25,6 @@
         <p class="lead text-muted">Ga je studeren in de mooiste studentenstad, schrijf je dan nu gratis in op onze website en vind de woonruimte die bij je past. </p>
         <p>
           <a href="{{ route('register') }}" class="btn btn-primary">Schrijf je nu in!</a>
-          <p> of </p>
-          <a href="{{ route('login') }}" class="btn btn-primary">Bekijk het actuele kamer aanbod!</a>
         </p>
       </div>
     </section>
