@@ -1,7 +1,9 @@
-<div class="navbar navbar-inverse bg-inverse">
-  <div class="container d-flex justify-content-between">
-    <a href="/" class="navbar-brand">Home</a>
-    <a href="#" class="navbar-brand">Hoe werkt het?</a>
-    <a href="#" class="navbar-brand">Kamer aanbod</a>
-    <a href="#" class="navbar-brand">Storing melden</a>
-  </div>
+<div class="nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">Over ons</a></li>
+    <li><a href="inschrijven.html">Inschrijven</a></li>
+    <li><a href="storing.html">Storing melden</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
