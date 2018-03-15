@@ -10,8 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//homepage
+//kamers bekijken
 Route::get('/', 'RoomController@index');
+
+Route::get('/kamer/{id}', 'RoomController@show');
 
 //registratie, login
 Auth::routes();

@@ -14,7 +14,7 @@ class RoomController extends Controller
 {
     public function index()
     {
-      $rooms = Room::latest('created_at')->with('photo')->get();
+      $rooms = Room::latest('created_at')->with('photos')->get();
 
       return view('welcome', compact('rooms'));
     }
@@ -54,6 +54,13 @@ class RoomController extends Controller
 
       return redirect('/dashboard')
       ->with('success','Nieuwe kamer geplaatst!');;
+    }
+
+    public function show($id){
+
+      $room = Room::find($id);
+
+      return view('show', compact('room'));
     }
 
 }
