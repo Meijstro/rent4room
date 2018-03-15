@@ -1,6 +1,6 @@
 .nav {
     background-color: #008e5a;
-    margin-bottom: -8px;
+    margin-bottom: -1%;
     margin-top: -1%;
     width: 100%;
 }
@@ -75,7 +75,7 @@ li a:hover {
 }
 .welcome p {
   margin-left: 10%;
-  padding-top: 10%;
+  padding-top: 5%;
   padding-bottom: 2%;
   color: white;
   font-family: verdana;
