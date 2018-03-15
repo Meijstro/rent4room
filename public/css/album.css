@@ -63,6 +63,14 @@ li a:hover {
     margin-left: 70%;
     text-decoration: none;
 }
+
+.card {
+  float: left;
+  width: 25%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
 .button2:hover{
     background-color: #d54d7b;
     color: white;

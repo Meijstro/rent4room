@@ -14,7 +14,7 @@
       <p>Ga je studeren in de mooiste studentenstad, schrijf je dan nu gratis in op onze website en vind de woonruimte die bij je past. </p>
           <a href="{{ route('register') }}" class="button1">Schrijf je nu in!</a>
           <p> of </p>
-          <a href="{{ route('login') }}" class="button1">Bekijk het actuele kamer aanbod!</a>
+          <a href="/kamers" class="button1">Bekijk het actuele kamer aanbod!</a>
         </p>
     </section>
 
