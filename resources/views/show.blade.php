@@ -26,14 +26,37 @@
                 </div>
 
                 <div class='card'>
-                  <img src="http://cdn-wp.s3-eu-central-1.amazonaws.com/wp-content/uploads/sites/10/2016/02/Eindhoven_Rooms_04.jpg"
-                      alt="Kamer Foto" height="100%" width="100%">
+                  <img height="100%" width="100%" src="{{asset($room->photos->first()['filename'])}}"
+                  alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
+
+                  @foreach ($room->photos as $photo)
+                  <div>
+                  <img height="20%" width="20%" src="{{asset($room->photos->first()['filename'])}}"
+                  alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
+                  </div>
+                  @endforeach
                 </div>
 
                 <div class="card">
-                  GEGEVENS
+                  <h3>{{$room->street}}, {{$room->housenumber}}</h3>
+                  <h3>{{$room->city->name}}, {{$room->postcode}}</h3>
+                  <h3>{{$room->square_meter}} m<sup>2</sup></h3>
+                  <h3>{{$room->price}} € p/m</h3>
+                  <h3>Aanbieder: {{$room->user->name}}</h3>
+                  <p>{{$room->created_at->diffForHumans()}}</p>
                 </div>
 
+                <div class="card">
+                  @if (Auth::check())
+                    <a href="/reageer_url_komt_hier"><h2>Reageer op deze kamer</h2></a>
+                  @else
+                  <p><strong> <a href="/login">
+                    Log in
+                  </a> of <a href="/register">
+                    registeer
+                  </a> om te kunnen reageren op dit kameraanbod</strong></p>
+                @endif
+                </div>
                 <div class="footer">
                 @include('layouts.footer')
                 </div>

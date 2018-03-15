@@ -1,3 +1,4 @@
+<a href="/kamer/{{$room->id}}">
 <div class="card">
   <div class="card-text">
     @if ($room->photos || $room->photos > 0)
@@ -9,6 +10,7 @@
     <h3>{{$room->square_meter}} m<sup>2</sup></h3>
     <h3>{{$room->price}} € p/m</h3>
     <h3>Aanbieder: {{$room->user->name}}</h3>
-    <p>{{$room->created_at}}</p>
+    <p>{{$room->created_at->diffForHumans()}}</p>
   </div>
 </div>
+</a>
