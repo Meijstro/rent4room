@@ -1,67 +1,68 @@
-body {
-  min-height: 75rem; /* Can be removed; just added for demo purposes */
+.nav {
+    background-color: #008e5a;
+    margin-bottom: -8px;
+    margin-top: -1%;
+    width: 100%;
 }
-
-
-
-.navbar {
-  margin-bottom: 0;
-  background-color: #008e5a;
+ul{
+    text-align: center;
+}
+li {
+    list-style-type: none;
+    display: inline;
+    text-align: center;
+    padding: 0;
+}
+li a {
+    display: inline-block;
+    font-family: verdana;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    background-color: #008e5a;
+    border-radius: 5px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #d54d7b;
+    color: white;
+}
+.button1{
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 6px 6px 5px;
+    -webkit-box-shadow: 6px 6px 5px #999;
+    -moz-box-shadow: 6px 6px 5px #999;
+    background: #008e5a;
+    color: white;
+    font-family: verdana;
+    border-radius: 10px;
+    border:1px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 20%;
+    text-decoration: none;
+}
+.button1:hover{
+    background-color: #d54d7b;
+    color: white;
+}
+.welcome {
+    height: 458px;
+    background-image:url("/Groningen.jpg");
+    background-size: 1600px 458px;
+    background-repeat:no-repeat;
+    margin-top: -1%;
+}
+.welcome p {
+  margin-left: 8%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  color: white;
   font-family: verdana;
 }
-.navbar-brand:hover {
-  background-color: #008e5a;
-  border-radius: 4px;
-}
-
-.jumbotron {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  margin-bottom: 0;
-  background-color: #eceeef;
-}
-
-.jumbotron p:last-child {
-  margin-bottom: 0;
-}
-
-.jumbotron-heading {
-  font-weight: 300;
-}
-
-.jumbotron .container {
-  max-width: 40rem;
-}
-
-.album {
-  min-height: 50rem; /* Can be removed; just added for demo purposes */
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  background-color: #eceeef;
-  border-radius: 6px;
-}
-
-.card {
-  float: left;
-  width: 50%;
-  padding: .75rem;
-  margin-bottom: 2rem;
-  border: 0;
-}
-
-.card > img {
-  margin-bottom: .75rem;
-}
-
-.card-text {
-  font-size: 85%;
-}
-
 footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
+  margin-top: -2%;
+  background-color: black;
+  color:white;
 }
