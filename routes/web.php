@@ -13,6 +13,8 @@
 //kamers bekijken
 Route::get('/', 'RoomController@index');
 
+Route::get('/kamers', 'RoomController@showall');
+
 Route::get('/kamer/{id}', 'RoomController@show');
 
 //registratie, login

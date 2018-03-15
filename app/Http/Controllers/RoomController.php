@@ -12,12 +12,20 @@ use App\PhotosRoom;
 
 class RoomController extends Controller
 {
+    public function showall()
+    {
+      $rooms = Room::latest('created_at')->with('photos')->get();
+
+      return view('showall', compact('rooms'));
+    }
+
     public function index()
     {
       $rooms = Room::latest('created_at')->with('photos')->get();
 
       return view('welcome', compact('rooms'));
     }
+
 
     public function create(UploadRequest $request)
     {
