@@ -18,7 +18,10 @@
         </p>
     </section>
 
-      <div class="rooms">
+    include ('layouts.searchbar')
+
+    <div class="album text-muted">
+      <div class="container">
 
         @foreach ($rooms as $room)
 
