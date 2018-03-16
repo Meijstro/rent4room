@@ -32,12 +32,12 @@ class RoomController extends Controller
 
       $this->validate(request(), [
         'street' => 'required',
-        'housenumber' => 'required',
+        'housenumber' => 'required|digits_between:1,4',
         'city_id' => 'required',
-        'postcode' => 'required',
-        'square_meter' => 'required',
-        'price' => 'required',
-        'images' => 'required',
+        'postcode' => 'required|regex:/^[1-9][0-9]{3}[\s]?[A-Za-z]{2}$/i',
+        'square_meter' => 'required|digits_between:1,2',
+        'price' => 'required|digits_between:2,4',
+        'images.*' => 'required|image|max:5048',
         'date_available' => 'required|date',
       ]);
 
@@ -60,10 +60,12 @@ class RoomController extends Controller
             ]);
         }
 
-        // die(Room::findOrFail($room->id)->with('photo')->get());
+      $newestRoom = User::find(auth()->id())->rooms()->latest()->first()->id;
 
       return redirect('/dashboard')
-      ->with('success','Nieuwe kamer geplaatst!');;
+      ->with('success','Nieuwe kamer geplaatst!
+      Klik <a href="/kamer/'.$newestRoom.'">
+      <em>hier</em></a> om de kamer te bekijken');;
     }
 
     public function show($id){

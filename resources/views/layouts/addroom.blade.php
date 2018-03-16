@@ -14,7 +14,7 @@
 
   <div class="form-group">
     <label for="dateavailable">Beschikbaar vanaf</label>
-    <input type="text" class="form-control" name="date_available" id="datepicker">
+    <input type="text" class="form-control" name="date_available" id="datepicker" value="{{ old('date_available') }}">
   </div>
 
   <div class="form-group">

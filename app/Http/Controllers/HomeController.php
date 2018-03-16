@@ -26,8 +26,9 @@ class HomeController extends Controller
     public function dashboard()
     {
         $cities = City::get();
+        $rooms = Room::get();
 
-        return view('dashboard', compact('cities'));
+        return view('dashboard', compact('cities', 'rooms'));
     }
 
 }

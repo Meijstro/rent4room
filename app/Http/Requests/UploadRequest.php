@@ -24,18 +24,19 @@ class UploadRequest extends FormRequest
     public function rules()
     {
       $rules = [
-        'street' => 'required',
-        'housenumber' => 'required',
-        'city_id' => 'required',
-        'postcode' => 'required',
-        'square_meter' => 'required',
-        'price' => 'required',
+
         ];
 
-      $images = count($this->input('images'));
-      foreach(range(0, $images) as $index) {
-      $rules['images.' . $index] = 'image|mimes:jpeg,bmp,png|max:2000';
-          }
+        $images = $this->file( 'images' );
+
+        if ( !empty( $images ) )
+        {
+            foreach ( $images as $key => $image ) // add individual rules to each image
+            {
+                $rules[ sprintf( 'images.%d', $key ) ] = 'required|mimes:jpg,jpeg,png,bmp,svg';
+            }
+        }
+
 
       return $rules;
     }
