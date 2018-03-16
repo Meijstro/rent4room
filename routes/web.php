@@ -11,6 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//kamers bekijken
+Route::get('/', 'RoomController@index');
+
+Route::get('/kamers', 'RoomController@showall');
+
+Route::get('/kamer/{id}', 'RoomController@show');
+
+//registratie, login
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@dashboard')->name('home');
+
+//kamer plaatsen
+Route::post('/newroom', 'RoomController@create');
+
+//Administrator, testing
+Route::get('/phpinfo', 'AdminController@phpinfo');
+
+Route::get('/test', 'AdminController@test');
