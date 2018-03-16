@@ -13,7 +13,8 @@
         <h5>Aanbieder: {{$room->user->name}}</h5>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Online since: {{$room->created_at->diffForHumans()}}</small>
+        <small class="text-muted">Geplaatst: {{$room->created_at->diffForHumans()}}</small><br />
+        <small class="text-muted">Beschikbaar vanaf: {{$room->date_available}}</small>
       </div>
   </a>
   </div>
