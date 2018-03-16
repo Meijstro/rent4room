@@ -22,6 +22,7 @@ class RoomsTableSeeder extends Seeder
           'user_id' => '2',
           'created_at' => '2018-01-01 10:00:00',
           'updated_at' => '2018-01-01 10:00:00',
+          'date_available' => '31-03-2018'
       ]);
       DB::table('rooms')->insert([
           'street' => 'Laanstraat',
@@ -33,6 +34,8 @@ class RoomsTableSeeder extends Seeder
           'user_id' => '2',
           'created_at' => '2018-01-01 10:10:00',
           'updated_at' => '2018-01-01 10:10:00',
+          'date_available' => '31-03-2018'
+
       ]);
       DB::table('rooms')->insert([
           'street' => 'Steeglaan',
@@ -44,6 +47,8 @@ class RoomsTableSeeder extends Seeder
           'user_id' => '2',
           'created_at' => '2018-01-01 10:20:00',
           'updated_at' => '2018-01-01 10:20:00',
+          'date_available' => '31-03-2018'
+
       ]);
     }
 }
