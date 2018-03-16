@@ -43,6 +43,7 @@
                   <h3>{{$room->square_meter}} m<sup>2</sup></h3>
                   <h3>{{$room->price}} € p/m</h3>
                   <h3>Aanbieder: {{$room->user->name}}</h3>
+                  <h4>Beschikbaar vanaf: {{$room->date_available}}</h4>
                   <p>{{$room->created_at->diffForHumans()}}</p>
                 </div>
 

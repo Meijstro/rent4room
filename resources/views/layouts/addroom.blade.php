@@ -9,7 +9,12 @@
 
   <div class="form-group">
     <label for="number">Huisnummer</label>
-    <input type="text" class="form-control" name="housenumber" id="street" placeholder="bijv. 11" value="{{ old('housenumber') }}">
+    <input type="text" class="form-control" name="housenumber" id="housenumber" placeholder="bijv. 11" value="{{ old('housenumber') }}">
+  </div>
+
+  <div class="form-group">
+    <label for="dateavailable">Beschikbaar vanaf</label>
+    <input type="text" class="form-control" name="date_available" id="datepicker">
   </div>
 
   <div class="form-group">

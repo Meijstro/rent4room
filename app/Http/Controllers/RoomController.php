@@ -38,6 +38,7 @@ class RoomController extends Controller
         'square_meter' => 'required',
         'price' => 'required',
         'images' => 'required',
+        'date_available' => 'required|date',
       ]);
 
       $room = Room::create([
@@ -47,6 +48,7 @@ class RoomController extends Controller
         'postcode' => request('postcode'),
         'square_meter' => request('square_meter'),
         'price' => request('price'),
+        'date_available' => request('date_available'),
         'user_id' => auth()->id(),
       ]);
 
