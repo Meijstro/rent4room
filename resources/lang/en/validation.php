@@ -101,10 +101,25 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'street' => [
+          'required' => 'Wij missen enkele gegevens. Controleer of U de straatnaam heeft ingevuld.',
         ],
-    ],
+        'housenumber' => [
+          'required' => 'Wij missen enkele gegevens. Controleer of U het huisnummer heeft ingevuld.',
+        ],
+        'city_id' => [
+          'required' => 'Wij missen enkele gegevens. Controleer of U de stad heeft ingevuld.',
+        ],
+        'postcode' => [
+          'required' => 'Wij missen enkele gegevens. Controleer of U de postcode heeft ingevuld.',
+        ],
+        'square_meter' => [
+          'required' => 'Wij missen enkele gegevens. Controleer of U de oppervlakte heeft ingevuld.',
+        ],
+        'price' => [
+          'required' => 'Wij missen enkele gegevens. Controleer of U de huurprijs heeft ingevuld.',
+        ],
+  ],
 
     /*
     |--------------------------------------------------------------------------
