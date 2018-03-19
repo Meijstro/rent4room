@@ -22,7 +22,7 @@
 
                 @include('layouts.nav')
 
-                <div class="title m-b-md">
+                <!-- <div class="title m-b-md">
                 </div>
 
                 <div class='card'>
@@ -58,15 +58,23 @@
                   </a> om te kunnen reageren op dit kameraanbod</strong></p>
                 @endif
                 </div>
-                <div class="footer">
-                @include('layouts.footer')
-                </div>
+
             </div>
 
-            @endforeach
 
+      </div> -->
+
+      <div class='card'>
+        <img height="100%" width="100%" src="{{asset($room->photos->first()['filename'])}}"
+        alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
+
+        @foreach ($room->photos as $photo)
+        <div>
+        <img height="20%" width="20%" src="{{asset($room->photos->first()['filename'])}}"
+        alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
+        </div>
+        @endforeach
       </div>
-
       <div class="card-body">
         <h4 class="card-title">{{$room->street}} {{$room->housenumber}}, {{$room->city->name}}<hr></h4>
         <h5>Grootte: {{$room->square_meter}} m<sup>2</sup></h5>
@@ -75,6 +83,7 @@
       </div>
       <div class="card-footer">
         <small class="text-muted">Online since: {{$room->created_at->diffForHumans()}}</small>
+        <h4>Beschikbaar vanaf: {{$room->date_available}}</h4>
       </div>
 
       <div class="card">
