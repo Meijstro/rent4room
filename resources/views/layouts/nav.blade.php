@@ -20,6 +20,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('register') }}">Inschrijven</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('login') }}">Login</a>
+            </li>
             <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Storing melden</a>
             </li>
@@ -33,5 +36,3 @@
     <!-- Collapsible content -->
 
 </nav>
-<!--/.Navbar-->
-<hr>

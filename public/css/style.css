@@ -96,6 +96,7 @@ li a:hover {
   padding-bottom: 2%;
   color: white;
   font-family: verdana;
+  font-size: 18px;
 }
 footer {
   background-color: black;
@@ -113,5 +114,6 @@ li {
     list-style-type: none;
 }
 ul {
-  padding-top: 15%;
+  padding-top: 20%;
+  padding-bottom:10%;
 }

@@ -1,6 +1,6 @@
 <footer>
       <div class="footer">
-        <ul> <h2> Contact</h2>
+        <ul> <h4> Contact</h4>
         <li> Korreweg 2     </li>
         <li> 9742 ED        </li>
         <li> Groningen    </li>
@@ -10,7 +10,7 @@
       </div>
 
       <div class="footer">
-        <ul> <h2>Openingstijden</h2>
+        <ul> <h4>Openingstijden</h4>
           <li> Maandag 8.30 – 17.00 </li>
           <li> Dinsdag 8.30 – 17.00 </li>
           <li> Woensdag 8.30 – 17.00 </li>
