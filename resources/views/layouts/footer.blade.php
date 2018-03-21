@@ -1,11 +1,11 @@
 <footer>
       <div class="footer">
         <ul> <h4> Contact</h4>
-        <li> Korreweg 2     </li>
-        <li> 9742 ED        </li>
-        <li> Groningen    </li>
-        <li> 06-36342082 </li>
-        <li> info@Room4Rent.nl </li>
+          <li> Korreweg 2     </li>
+          <li> 9742 ED        </li>
+          <li> Groningen    </li>
+          <li> 06-36342082 </li>
+          <li> info@Room4Rent.nl </li>
         </ul>
       </div>
 

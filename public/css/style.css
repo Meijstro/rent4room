@@ -12,6 +12,11 @@
     margin-top: -1%;
     width: 100%;
 }
+h1 {
+  color: #008e5a;
+  font-family: verdana;
+  font-weight: bold;
+}
 /*ul{
     text-align: center;
 }
@@ -99,21 +104,19 @@ li a:hover {
   font-size: 18px;
 }
 footer {
-  background-color: black;
+  background-color: white;
   text-align: center;
 }
 .footer {
-  margin-top: -2%;
-  background-color: black;
-  color:white;
+  margin-top: 2%;
+  margin-bottom: 0%;
+  color: #008e5a;
+  font-size: 12px;
   display: inline-block;
   text-decoration: none;
   list-style-type: none;
+  font-weight: bold;
 }
 li {
     list-style-type: none;
-}
-ul {
-  padding-top: 20%;
-  padding-bottom:10%;
 }
