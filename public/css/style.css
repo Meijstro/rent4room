@@ -68,7 +68,7 @@ li a:hover {
     border:1px;
     font-size: 20px;
     text-align: center;
-    margin-left: 70%;
+    margin-left: 10%;
     text-decoration: none;
 }
 
@@ -82,6 +82,7 @@ li a:hover {
 .button2:hover{
     background-color: #d54d7b;
     color: white;
+    text-decoration: none;
 }
 .welcome {
     height: 458px;
@@ -91,13 +92,26 @@ li a:hover {
 }
 .welcome p {
   margin-left: 10%;
-  padding-top: 10%;
+  padding-top: 5%;
   padding-bottom: 2%;
   color: white;
   font-family: verdana;
 }
 footer {
+  background-color: black;
+  text-align: center;
+}
+.footer {
   margin-top: -2%;
   background-color: black;
   color:white;
+  display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
+}
+li {
+    list-style-type: none;
+}
+ul {
+  padding-top: 15%;
 }

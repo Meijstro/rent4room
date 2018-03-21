@@ -1,18 +1,21 @@
 <footer>
       <div class="footer">
-        <h3> Contact </h3>
-        <p> Korreweg 2     <br>
-            9742 ED        <br>
-            06-36342082    <br>
-            info@Room4Rent.nl </p>
+        <ul> <h2> Contact</h2>
+        <li> Korreweg 2     </li>
+        <li> 9742 ED        </li>
+        <li> Groningen    </li>
+        <li> 06-36342082 </li>
+        <li> info@Room4Rent.nl </li>
+        </ul>
       </div>
 
       <div class="footer">
-        <h3> Openingstijden </h3>
-        <p>  Maandag 8.30 – 17.00 <br>
-             Dinsdag 8.30 – 17.00 <br>
-             Woensdag 8.30 – 17.00 <br>
-             Donderdag 8.30 – 17.00 <br>
-             Vrijdag 8.30 – 17.00 <br>
+        <ul> <h2>Openingstijden</h2>
+          <li> Maandag 8.30 – 17.00 </li>
+          <li> Dinsdag 8.30 – 17.00 </li>
+          <li> Woensdag 8.30 – 17.00 </li>
+          <li> Donderdag 8.30 – 17.00 </li>
+          <li> Vrijdag 8.30 – 17.00 </li>
+        </ul>
       </div>
 </footer>
