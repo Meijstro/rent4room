@@ -97,15 +97,23 @@ li {
   background-color: #80bc85;
 }
 .about p{
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-top: 5%;
-  color: white;
+  color: black;
+  font-weight: bold;
 }
 .contact {
+  margin-top: -39%;
+  margin-right: 5%;
   float: right;
-  width: 10%;
+  width: 12%;
   height: 10%;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #80bc85;
+}
+h2::first-letter {
+  color: white;
+}
+h2 {
+  margin-left: 5%;
+  color: #008e5a;
 }
