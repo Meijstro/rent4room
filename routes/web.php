@@ -17,6 +17,10 @@ Route::get('/kamers', 'RoomController@showall');
 
 Route::get('/kamer/{id}', 'RoomController@show');
 
+Route::get('/about', function() {
+  return view ('about');
+});
+
 //registratie, login
 Auth::routes();
 
