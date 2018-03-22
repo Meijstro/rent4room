@@ -16,23 +16,25 @@
 
   <div class="about">
 
-    <p>Sinds 2018 is Room4Rent Vastgoed actief op de kamermarkt.
+    <h2> Over ons </h2>
+
+    <p style font-weight="bold">Sinds 2018 is Room4Rent Vastgoed actief op de kamermarkt.
       Door de hoge vraag van studentenkamers in Groningen is er besloten
-      om te focussen op kamers in de stad Groningen. Met een team van drie mensen
+      om uitsluitend te focussen op de kamermarkt in de stad Groningen. Met een team bestaande uit drie mensen
       wordt er dag en nacht hard gewerkt om aan de wensen van de klant te voldoen. </p>
 
     <p>Room4Rent onderscheidt zich van andere kameraanbieders door een gerichte doelgroep te kiezen
       en daarbij lage kosten in rekening te brengen. Wij vragen eenmalig 20% van de huurprijs
       wanneer er een kamer is verhuurd. </p>
 
+    <p>We blijven als bedrijf niet stilstaan en investeren in het zoeken
+       naar potentiele huurder en verhuurders om zo een divers mogelijk
+        aanbod aan te kunnen bieden. </p>
 
-Als eerste een vergunning
-Dit resulteerde in dat wij als eerste kamerverhuurbedrijf een kamerverhuur vergunning kregen uitgereikt door de gemeente Groningen!
+    <p>Dit beleid zetten wij voort! </p>
 
-Schaalvergroting met behoud van kwaliteit
-Na deze investering heeft ons bedrijf natuurlijk niet stilgestaan, wel hebben we gekozen voor een beheerste schaalvergroting zodat we de kwaliteit van ons vastgoed  hoog weten te houden.
-
-Dit beleid zetten wij voort! </p>
+    <p>Namens het team van Room4Rent wensen wij je veel succes bij het vinden
+      van jou studentenkamer. </p>
 
   </div>
 

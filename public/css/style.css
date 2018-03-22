@@ -17,31 +17,8 @@ h1 {
   font-family: verdana;
   font-weight: bold;
 }
-/*ul{
-    text-align: center;
-}
-li {
-    list-style-type: none;
-    display: inline;
-    text-align: center;
-    padding: 0;
-}
-li a {
-    display: inline-block;
-    font-family: verdana;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    background-color: #008e5a;
-    border-radius: 5px;
-    text-decoration: none;
-}
-li a:hover {
-    background-color: #d54d7b;
-    color: white;*/
-}
 .button1{
-    padding: 20px;
+    padding: 5px;
     cursor: pointer;
     box-shadow: 6px 6px 5px;
     -webkit-box-shadow: 6px 6px 5px #999;
@@ -51,7 +28,7 @@ li a:hover {
     font-family: verdana;
     border-radius: 10px;
     border:1px;
-    font-size: 20px;
+    font-size: 14px;
     text-align: center;
     margin-left: 10%;
     text-decoration: none;
@@ -59,6 +36,7 @@ li a:hover {
 .button1:hover{
     background-color: #d54d7b;
     color: white;
+    text-decoration: none;
 }
 .button2{
     padding: 20px;
@@ -129,15 +107,23 @@ li {
   background-color: #80bc85;
 }
 .about p{
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-top: 5%;
-  color: white;
+  color: black;
+  font-weight: bold;
 }
 .contact {
+  margin-top: -39%;
+  margin-right: 5%;
   float: right;
-  width: 10%;
+  width: 12%;
   height: 10%;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #80bc85;
+}
+h2::first-letter {
+  color: white;
+}
+h2 {
+  margin-left: 5%;
+  color: #008e5a;
 }
