@@ -15,7 +15,7 @@
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Over ons</a>
+                <a class="nav-link" href="/about">Over ons</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('register') }}">Inschrijven</a>
