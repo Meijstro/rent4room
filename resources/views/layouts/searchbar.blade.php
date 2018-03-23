@@ -1,19 +1,8 @@
-
-
-<div class="panel panel-primary">
-
-    <div class="panel-body">
-
-        <div class="row">
-
-            <div class="container">
-              <div class="panel-heading">
-                  Rooms <small>({{ $rooms->count() }})</small>
-              </div>
-                <form action="{{ url('search') }}" method="get">
-                    <div class="form-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search..." value="{{ request('q') }}"/>
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="panel panel-primary" align="center">
+  <div>Rooms <small>({{ $rooms->count() }})</small></div>
+      <form class="form-wrapper cf" action="{{ url('search') }}" method="get">
+        <input name="q" type="text" placeholder="Search here..." value="{{ request('q') }}">
+        <button type="submit">Search</button>
+      </form>
+  </div>
+<hr>

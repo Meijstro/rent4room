@@ -7,6 +7,7 @@
 
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" rel="stylesheet">
+        
         <title>Room4Rent</title>
 
     </head>
