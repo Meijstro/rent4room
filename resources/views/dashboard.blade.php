@@ -22,7 +22,6 @@
                 @if (Auth::user()->role == 'Verhuurder')
                   @include ('layouts.addroom')
                 @elseif (Auth::user()->role == 'Huurder')
-                  @include ('layouts.messages')
                 @endif
               </div>
 
