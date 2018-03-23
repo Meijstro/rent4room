@@ -18,51 +18,11 @@
     </head>
     <body>
 
-                <div class="content">
+
 
                 @include('layouts.nav')
 
-                <!-- <div class="title m-b-md">
-                </div>
 
-                <div class='card'>
-                  <img height="100%" width="100%" src="{{asset($room->photos->first()['filename'])}}"
-                  alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
-
-                  @foreach ($room->photos as $photo)
-                  <div>
-                  <img height="20%" width="20%" src="{{asset($room->photos->first()['filename'])}}"
-                  alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
-                  </div>
-                  @endforeach
-                </div>
-
-                <div class="card">
-                  <h3>{{$room->street}}, {{$room->housenumber}}</h3>
-                  <h3>{{$room->city->name}}, {{$room->postcode}}</h3>
-                  <h3>{{$room->square_meter}} m<sup>2</sup></h3>
-                  <h3>{{$room->price}} € p/m</h3>
-                  <h3>Aanbieder: {{$room->user->name}}</h3>
-                  <h4>Beschikbaar vanaf: {{$room->date_available}}</h4>
-                  <p>{{$room->created_at->diffForHumans()}}</p>
-                </div>
-
-                <div class="card">
-                  @if (Auth::check())
-                    <a href="/reageer_url_komt_hier"><h2>Reageer op deze kamer</h2></a>
-                  @else
-                  <p><strong> <a href="/login">
-                    Log in
-                  </a> of <a href="/register">
-                    registeer
-                  </a> om te kunnen reageren op dit kameraanbod</strong></p>
-                @endif
-                </div>
-
-            </div>
-
-
-      </div> -->
 
       <div class='card'>
         <img height="100%" width="100%" src="{{asset($room->photos->first()['filename'])}}"
@@ -88,7 +48,7 @@
 
       <div class="card">
           @if (Auth::check())
-            <a href="/reageer_url_komt_hier"><h2>Reageer op deze kamer</h2></a>
+            <a href="/message/0"><h2>Reageer op deze kamer</h2></a>
             @else
             <p><strong> <a href="/login">Log in</a> of <a href="/register">registeer</a> om te kunnen reageren op dit kameraanbod</strong></p>
           @endif
