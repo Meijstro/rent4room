@@ -48,7 +48,7 @@
 
       <div class="card">
           @if (Auth::check())
-            <a href="/message/0"><h2>Reageer op deze kamer</h2></a>
+            <a href="/message/{{$room->user->id}}"><h2>Reageer op deze kamer</h2></a>
             @else
             <p><strong> <a href="/login">Log in</a> of <a href="/register">registeer</a> om te kunnen reageren op dit kameraanbod</strong></p>
           @endif
