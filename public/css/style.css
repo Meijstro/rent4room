@@ -17,29 +17,7 @@ h1 {
   font-family: verdana;
   font-weight: bold;
 }
-/*ul{
-    text-align: center;
-}
-li {
-    list-style-type: none;
-    display: inline;
-    text-align: center;
-    padding: 0;
-}
-li a {
-    display: inline-block;
-    font-family: verdana;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    background-color: #008e5a;
-    border-radius: 5px;
-    text-decoration: none;
-}
-li a:hover {
-    background-color: #d54d7b;
-    color: white;*/
-}
+
 .button1{
     padding: 20px;
     cursor: pointer;
@@ -77,13 +55,6 @@ li a:hover {
     text-decoration: none;
 }
 
-.card {
-  float: left;
-  min-width: 25%;
-  padding: 10px;
-  margin-bottom: 2rem;
-  border: 0;
-}
 .button2:hover{
     background-color: #d54d7b;
     color: white;
