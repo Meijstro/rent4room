@@ -19,10 +19,10 @@
               </div>
               <div class="card-body">
                 @include ('layouts.alerts')
+                @include ('messages.peoplelist')
                 @if (Auth::user()->role == 'Verhuurder')
                   @include ('layouts.addroom')
                 @elseif (Auth::user()->role == 'Huurder')
-                  @include ('layouts.messages')
                 @endif
               </div>
 
