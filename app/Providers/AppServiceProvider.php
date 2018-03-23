@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Rooms\RoomsRepository;
 use Illuminate\Support\ServiceProvider;
+use App\Rooms\EloquentRoomsRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,8 +23,10 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
-        //
-    }
+     public function register()
+     {
+       $this->app->bind(RoomsRepository::class, function () {
+           return new EloquentRoomsRepository();
+       });
+     }
 }

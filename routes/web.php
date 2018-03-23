@@ -11,6 +11,8 @@
 |
 */
 //kamers bekijken
+use App\Rooms\RoomsRepository;
+
 Route::get('/', 'RoomController@index');
 
 Route::get('/kamers', 'RoomController@showall');
@@ -29,3 +31,11 @@ Route::post('/newroom', 'RoomController@create');
 Route::get('/phpinfo', 'AdminController@phpinfo');
 
 Route::get('/test', 'AdminController@test');
+
+Route::get('/search', function (RoomsRepository $repository) {
+    $rooms = $repository->search((string) request('q'));
+
+    return view('showall', [
+    	'rooms' => $rooms,
+    ]);
+});
