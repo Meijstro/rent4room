@@ -17,9 +17,6 @@ class AdminController extends Controller
 
     public function test()
     {
-      $this->middleware('auth');
-      $authUserID = Auth::id();
-      $authUser = Talk::setAuthUserId($authUserID);
-      dd($authUser);
+    
     }
 }

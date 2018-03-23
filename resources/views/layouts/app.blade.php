@@ -17,17 +17,11 @@
 
 
     <!-- Scripts -->
+
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- <script src="//code.jquery.com/jquery-1.12.4.js"></script> -->
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <script>
-    $( function() {
-      $( "#datepicker" ).datepicker({
-        dateFormat: "dd-mm-yy"
-      });
-    });
-    </script>
 </head>
 
 <body>
@@ -40,4 +34,11 @@
                 <!-- Include all compiled plugins (below), or include individual files as needed -->
                 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </body>
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker({
+    dateFormat: "dd-mm-yy"
+  });
+});
+</script>
 </html>

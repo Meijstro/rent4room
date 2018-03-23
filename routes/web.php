@@ -29,13 +29,18 @@ Auth::routes();
 Route::get('/dashboard', 'HomeController@dashboard')->name('home');
 
 //messaging
-Route::get('/berichten', 'MessageController@index');
 
-Route::get('message/{id}', 'MessageController@chatHistory')->name('message.read');
 
-Route::group(['prefix'=>'ajax', 'as'=>'ajax::'], function() {
-   Route::post('message/send', 'MessageController@ajaxSendMessage')->name('message.new');
-   Route::delete('message/delete/{id}', 'MessageController@ajaxDeleteMessage')->name('message.delete');
+
+Route::middleware(['auth', 'talk'])->group(function () {
+    Route::get('/berichten', 'MessageController@index');
+    Route::get('message/{id}', 'MessageController@chatHistory')->name('message.read');
+    Route::post('/count/{id}', 'MessageController@counter');
+    Route::get('/messagetest', 'MessageController@test');
+    Route::group(['prefix'=>'ajax', 'as'=>'ajax::'], function() {
+       Route::post('message/send', 'MessageController@ajaxSendMessage')->name('message.new');
+       Route::delete('message/delete/{id}', 'MessageController@ajaxDeleteMessage')->name('message.delete');
+    });
 });
 
 
