@@ -19,7 +19,7 @@
               </div>
               <div class="card-body">
                 @include ('layouts.alerts')
-                @include ('messages.peoplelist')
+                <a href="/message/0"><h5>Berichten</h5></a>
                 @if (Auth::user()->role == 'Verhuurder')
                   @include ('layouts.addroom')
                 @elseif (Auth::user()->role == 'Huurder')
