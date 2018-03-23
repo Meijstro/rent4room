@@ -52,13 +52,13 @@ class RoomController extends Controller
         'user_id' => auth()->id(),
       ]);
 
-        foreach ($request->images as $image){
-          $filename = $image->store('public');
-            PhotosRoom::create([
-                'room_id' => $room->id,
-                'filename' => Storage::url($filename)
-            ]);
-        }
+      foreach ($request->images as $image){
+        $filename = $image->store('public');
+        PhotosRoom::create([
+            'room_id' => $room->id,
+            'filename' => Storage::url($filename)
+          ]);
+      }
 
       $newestRoom = User::find(auth()->id())->rooms()->latest()->first()->id;
 
@@ -68,8 +68,8 @@ class RoomController extends Controller
       <em>hier</em></a> om de kamer te bekijken');;
     }
 
-    public function show($id){
-
+    public function show($id)
+    {
       $room = Room::find($id);
 
       return view('show', compact('room'));
