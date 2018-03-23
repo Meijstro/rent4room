@@ -34,7 +34,7 @@
     <p>Dit beleid zetten wij voort! </p>
 
     <p>Namens het team van Room4Rent wensen wij je veel succes bij het vinden
-      van jou studentenkamer. </p>
+      van jou ideale studentenkamer. </p>
 
   </div>
 
