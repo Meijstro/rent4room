@@ -52,14 +52,15 @@ class RoomController extends Controller
         'user_id' => auth()->id(),
       ]);
 
+      if(isset($request->images)){
       foreach ($request->images as $image){
         $filename = $image->store('public');
         PhotosRoom::create([
             'room_id' => $room->id,
             'filename' => Storage::url($filename)
           ]);
+        }
       }
-
       $newestRoom = User::find(auth()->id())->rooms()->latest()->first()->id;
 
       return redirect('/dashboard')

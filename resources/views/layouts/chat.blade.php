@@ -44,13 +44,14 @@
 
       @yield('content')
 
+      @if(isset($user))
       <div class="chat-message clearfix">
       <form action="" method="post" id="talkSendMessage">
             <textarea name="message-data" id="message-data" placeholder ="Type your message" rows="3"></textarea>
             <input type="hidden" name="_id" value="{{@request()->route('id')}}">
             <button type="submit">Send</button>
       </form>
-
+      @endif
       </div> <!-- end chat-message -->
 
     </div> <!-- end chat -->
