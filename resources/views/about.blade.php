@@ -14,6 +14,8 @@
 
   @include('layouts.nav')
 
+  @include('layouts.navigatie')
+
   <div class="about">
 
     <h2> Over ons </h2>

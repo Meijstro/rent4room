@@ -1,7 +1,10 @@
 .navbar.navbar-1 .navbar-toggler-icon {
     background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
 }
+.card {
+  max-width: 25%;
 
+}
 
 .nav {
     background-color: #008e5a;
@@ -28,8 +31,9 @@
     border-radius: 5px;
     text-decoration: none;
 }
-.nav a:hover {
-  background-color: #d54d7b;;
+.nav li a:hover {
+    background-color: #d54d7b;
+    color: white;
 }
 h1 {
   color: #008e5a;
