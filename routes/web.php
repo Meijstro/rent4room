@@ -35,7 +35,7 @@ Route::get('/dashboard', 'HomeController@dashboard')->name('home');
 
 Route::middleware(['auth', 'talk'])->group(function () {
     Route::get('/berichten', 'MessageController@index');
-    Route::get('message/{id}', 'MessageController@chatHistory')->name('message.read');
+    Route::get('message/{userid}/{roomid?}', 'MessageController@chatHistory')->name('message.read');
     Route::post('/count/{id}', 'MessageController@counter');
     Route::get('/messagetest', 'MessageController@test');
     Route::group(['prefix'=>'ajax', 'as'=>'ajax::'], function() {

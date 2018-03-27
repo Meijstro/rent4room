@@ -34,7 +34,8 @@
 
         <div class="chat-about">
             @if(isset($user))
-                <div class="chat-with">{{'Chat met ' . @$user->name}}</div>
+                <div class="chat-with">{{'Je chat met: ' . @$user->name}}</div>
+                <div class="chat-with">Betreft de kamer aan <a href="/kamer/{{$room->id}}" target="_blank" > {{$room->street}} {{$room->housenumber}}</a></div>
             @else
                 <div class="chat-with">Geen gesprek geselecteerd</div>
             @endif
@@ -48,7 +49,8 @@
       <div class="chat-message clearfix">
       <form action="" method="post" id="talkSendMessage">
             <textarea name="message-data" id="message-data" placeholder ="Type your message" rows="3"></textarea>
-            <input type="hidden" name="_id" value="{{@request()->route('id')}}">
+            <input type="hidden" name="_id" value="{{@request()->route('userid')}}">
+            <input type="hidden" name="room_id" value="{{@request()->route('roomid')}}">
             <button type="submit">Send</button>
       </form>
       @endif
@@ -70,7 +72,7 @@
 
           $.ajax({
             type: 'POST',
-            url: '/count/{{$convo}}',
+            url: __baseUrl + '/count/{{$convo}}',
             dataType: 'json',
             data: {
               counter:$('#talkMessages').data('counter')

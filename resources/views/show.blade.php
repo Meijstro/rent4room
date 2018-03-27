@@ -47,9 +47,11 @@
       </div>
 
       <div class="card">
-          @if (Auth::check())
-            <a href="/message/{{$room->user->id}}"><h2>Reageer op deze kamer</h2></a>
-            @else
+          @if (Auth::check() && $room->user->id == Auth::user()->id)
+          <a href="*UPDATE URL*"><h4>Update deze kamer</h4></a>
+          @elseif (Auth::check())
+          <a href="/message/{{$room->user->id}}/{{$room->id}}"><h2>Reageer op deze kamer</h2></a>
+          @else
             <p><strong> <a href="/login">Log in</a> of <a href="/register">registeer</a> om te kunnen reageren op dit kameraanbod</strong></p>
           @endif
       </div>
