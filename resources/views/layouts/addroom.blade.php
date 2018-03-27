@@ -1,4 +1,4 @@
-<h2> Plaats een nieuwe kamer</h2><br>
+<h3> Plaats een nieuwe kamer</h3><br>
 
 <form action="/newroom" method="POST" enctype="multipart/form-data">
   {{ csrf_field() }}

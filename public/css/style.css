@@ -6,7 +6,6 @@
 .nav {
     background-color: #008e5a;
     width: 100%;
-    margin-bottom: -1%;
 }
 .nav ul{
     text-align: center;
@@ -16,7 +15,8 @@
     list-style-type: none;
     display: inline;
     text-align: center;
-    padding: 0;
+    padding: 0px;
+    padding-bottom: -10px;
 }
 .nav li a {
     display: inline-block;

@@ -2,6 +2,8 @@
 
 
 @section('content')
+
+@include('layouts.navigatie')
 <div class="container">
 
       <div class="col-md-8">
