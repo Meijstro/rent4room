@@ -29,10 +29,10 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@dashboard')->name('home');
 
+//upgrading account
+Route::post('/upgrade', 'CheckoutController@store');
+
 //messaging
-
-
-
 Route::middleware(['auth', 'talk'])->group(function () {
     Route::get('/berichten', 'MessageController@index');
     Route::get('message/{userid}/{roomid?}', 'MessageController@chatHistory')->name('message.read');

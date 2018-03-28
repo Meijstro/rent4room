@@ -17,6 +17,7 @@ class AdminController extends Controller
 
     public function test()
     {
-      //
+      $user = User::where('id', Auth::id())
+          ->update(['premium' => 1]);
     }
 }

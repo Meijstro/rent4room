@@ -14,6 +14,16 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">Over ons</a>
+            </li>
+            <li class="nav-item">
+      @guest
+                <a class="nav-link" href="{{ route('register') }}">Inschrijven</a>
+      @else
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+      @endguest
+            </li>
       @guest
             <li class="nav-item">
               <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
