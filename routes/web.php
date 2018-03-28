@@ -20,6 +20,10 @@ Route::get('/kamers', 'RoomController@showall');
 
 Route::get('/kamer/{id}', 'RoomController@show');
 
+Route::get('/kamer/{id}/aanpassen', 'RoomController@edit');
+
+Route::patch('/update/{id}', 'RoomController@update');
+
 Route::get('/about', function() {
   return view ('about');
 });
