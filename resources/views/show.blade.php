@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+        <link rel="canonical" href="//getbootstrap.com/docs/4.0/examples/album/">
 
         <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
         <!-- Custom styles for this template -->
         <link href="/css/style.css" rel="stylesheet">
@@ -47,18 +47,22 @@
       </div>
 
       <div class="card">
-          @if (Auth::check())
-            <a href="/message/{{$room->user->id}}"><h2>Reageer op deze kamer</h2></a>
-            @else
-            <p><strong> <a href="/login">Log in</a> of <a href="/register">registeer</a> om te kunnen reageren op dit kameraanbod</strong></p>
+          @if (Auth::check() && $room->user->id == Auth::user()->id)
+          <h4><a href="/kamer/{{$room->id}}/aanpassen">Update deze kamer</a></h4>
+          @elseif (Auth::check() && Auth::user()->premium == '1')
+          <h2><a href="/message/{{$room->user->id}}/{{$room->id}}">Reageer op deze kamer</a></h2>
+          @elseif (Auth::check())
+          <h2><a href="/dashboard">Upgrade je Account om te kunnen reageren</a></h2>
+          @else
+          <p><strong> <a href="/login">Log in</a> of <a href="/register">registeer</a></strong></p>
           @endif
       </div>
 
+      @include('layouts.googlemap')
 
-
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     </body>
 </html>

@@ -30,4 +30,7 @@ class Room extends Model
     return $this->hasMany(PhotosRoom::class);
   }
 
+  public function conversation(){
+    return $this->hasMany(Conversation::class);
+  }
 }

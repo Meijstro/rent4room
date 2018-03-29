@@ -102,22 +102,25 @@ return [
 
     'custom' => [
         'street' => [
-          'required' => 'Wij missen enkele gegevens. Controleer of U de straatnaam heeft ingevuld.',
+          'required' => 'We are missing some information. Check whether you have entered the street name',
         ],
         'housenumber' => [
-          'required' => 'Wij missen enkele gegevens. Controleer of U het huisnummer heeft ingevuld.',
+          'required' => 'We are missing some information. Check whether you have entered the house number',
         ],
         'city_id' => [
-          'required' => 'Wij missen enkele gegevens. Controleer of U de stad heeft ingevuld.',
+          'required' => 'We are missing some information. Check whether you have selected the city',
         ],
         'postcode' => [
-          'required' => 'Wij missen enkele gegevens. Controleer of U de postcode heeft ingevuld.',
+          'required' => 'We are missing some information. Check whether you have entered the postcode',
         ],
         'square_meter' => [
-          'required' => 'Wij missen enkele gegevens. Controleer of U de oppervlakte heeft ingevuld.',
+          'required' => 'We are missing some information. Check whether you have entered the square meters',
         ],
         'price' => [
-          'required' => 'Wij missen enkele gegevens. Controleer of U de huurprijs heeft ingevuld.',
+          'required' => 'We are missing some information. Check whether you have entered the monthly price',
+        ],
+        'date_available' => [
+          'required' => 'We are missing some information. Check whether you have entered the date of availability.',
         ],
   ],
 

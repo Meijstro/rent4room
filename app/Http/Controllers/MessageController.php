@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Room;
+use App\Conversation;
 use Nahid\Talk\Facades\Talk;
 use Auth;
 use View;
@@ -32,20 +34,27 @@ class MessageController extends Controller
       }
     }
 
-    public function chatHistory($id)
+    public function chatHistory($userid, $roomid = null)
     {
-    $conversations = Talk::getMessagesByUserId($id);
+    $conversations = Talk::getMessagesByUserId($userid);
+    $convo = Talk::isConversationExists($userid);
     $user = '';
     $messages = [];
     if(!$conversations) {
-        $user = User::find($id);
+        $user = User::find($userid);
+        $room = Room::find($roomid);
     } else {
         $user = $conversations->withUser;
         $messages = $conversations->messages;
-    }
-    $convo = Talk::isConversationExists($id);
 
-    return view('messages.conversations', compact('messages', 'user', 'convo'));
+        $findRoom = Conversation::find($convo)->room_id;
+        $room = Room::find($findRoom);
+      }
+    if(empty($room) && $userid !== '0'){
+      return redirect('/message/0');
+    }
+
+    return view('messages.conversations', compact('messages', 'user', 'convo', 'room'));
     }
 
     public function ajaxSendMessage(Request $request)
@@ -53,13 +62,15 @@ class MessageController extends Controller
       if ($request->ajax()) {
           $rules = [
               'message-data'=>'required',
-              '_id'=>'required'
+              '_id'=>'required',
+
           ];
           $this->validate($request, $rules);
           $body = $request->input('message-data');
           $userId = $request->input('_id');
+          $room_id = $request->input('room_id');
 
-          if ($message = Talk::sendMessageByUserId($userId, $body)) {
+          if ($message = Talk::sendMessageByUserId($userId, $body, $room_id)) {
 
               $html = view('ajax.newMessageHTML', compact('message'))->render();
               return response()->json(['status'=>'success', 'html'=>$html], 200);
@@ -89,7 +100,9 @@ class MessageController extends Controller
 
     public function test()
     {
-      $test = Auth::user()->role;
+      $test = Talk::threads();
+      $findRoom = Conversation::find($convo)->room_id;
+      $room = Room::find($findRoom);
       dd($test);
     }
 }

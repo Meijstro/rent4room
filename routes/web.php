@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 //kamers bekijken
 use App\Rooms\RoomsRepository;
 
@@ -18,6 +19,10 @@ Route::get('/', 'RoomController@index');
 Route::get('/kamers', 'RoomController@showall');
 
 Route::get('/kamer/{id}', 'RoomController@show');
+
+Route::get('/kamer/{id}/aanpassen', 'RoomController@edit');
+
+Route::patch('/update/{id}', 'RoomController@update');
 
 Route::get('/about', function() {
   return view ('about');
@@ -28,13 +33,13 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@dashboard')->name('home');
 
+//upgrading account
+Route::post('/upgrade', 'CheckoutController@store');
+
 //messaging
-
-
-
 Route::middleware(['auth', 'talk'])->group(function () {
     Route::get('/berichten', 'MessageController@index');
-    Route::get('message/{id}', 'MessageController@chatHistory')->name('message.read');
+    Route::get('message/{userid}/{roomid?}', 'MessageController@chatHistory')->name('message.read');
     Route::post('/count/{id}', 'MessageController@counter');
     Route::get('/messagetest', 'MessageController@test');
     Route::group(['prefix'=>'ajax', 'as'=>'ajax::'], function() {
@@ -47,7 +52,7 @@ Route::middleware(['auth', 'talk'])->group(function () {
 //kamer plaatsen
 Route::post('/newroom', 'RoomController@create');
 
-//Administrator, testing
+//Administrator
 Route::get('/phpinfo', 'AdminController@phpinfo');
 
 Route::get('/test', 'AdminController@test');
@@ -59,3 +64,5 @@ Route::get('/search', function (RoomsRepository $repository) {
     	'rooms' => $rooms,
     ]);
 });
+
+Route::get('/{locale}', 'LanguageController@switchLang');

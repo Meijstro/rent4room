@@ -4,6 +4,8 @@
 @section('content')
   @include('layouts.nav')
 
+  @include('layouts.navigatie')
+
   <div class="welcome">
 
     <p>Ga je studeren in de mooiste studentenstad, schrijf je dan nu <br>
