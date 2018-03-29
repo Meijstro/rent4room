@@ -52,11 +52,11 @@ return [
     'json'                 => 'The :attribute must be a valid JSON string.',
     'max'                  => [
         'numeric' => 'The :attribute may not be greater than :max.',
-        'file'    => 'The :attribute may not be greater than :max kilobytes.',
+        'file'    => 'De :attribute mogen niet groter zijn dan :max kilobytes.',
         'string'  => 'The :attribute may not be greater than :max characters.',
         'array'   => 'The :attribute may not have more than :max items.',
     ],
-    'mimes'                => 'The :attribute must be a file of type: :values.',
+    'mimes'                => 'De :attribute moeten bestanden zijn van het type: :values.',
     'mimetypes'            => 'The :attribute must be a file of type: :values.',
     'min'                  => [
         'numeric' => 'The :attribute must be at least :min.',
@@ -102,25 +102,25 @@ return [
 
     'custom' => [
         'street' => [
-          'required' => 'We are missing some information. Check whether you have entered the street name',
+          'required' => 'Wij missen enkele gegevens. Controleer of U de straatnaam heeft ingevuld.',
         ],
         'housenumber' => [
-          'required' => 'We are missing some information. Check whether you have entered the house number',
+          'required' => 'Wij missen enkele gegevens. Controleer of U het huisnummer heeft ingevuld.',
         ],
         'city_id' => [
-          'required' => 'We are missing some information. Check whether you have selected the city',
+          'required' => 'Wij missen enkele gegevens. Controleer of U de stad heeft ingevuld.',
         ],
         'postcode' => [
-          'required' => 'We are missing some information. Check whether you have entered the postcode',
+          'required' => 'Wij missen enkele gegevens. Controleer of U de postcode heeft ingevuld.',
         ],
         'square_meter' => [
-          'required' => 'We are missing some information. Check whether you have entered the square meters',
+          'required' => 'Wij missen enkele gegevens. Controleer of U de oppervlakte heeft ingevuld.',
         ],
         'price' => [
-          'required' => 'We are missing some information. Check whether you have entered the monthly price',
+          'required' => 'Wij missen enkele gegevens. Controleer of U de huurprijs heeft ingevuld.',
         ],
         'date_available' => [
-          'required' => 'We are missing some information. Check whether you have entered the date of availability.',
+          'required' => 'Wij missen enkele gegevens. Controleer of U de beschikbaarheidsdatum heeft ingevuld.',
         ],
   ],
 

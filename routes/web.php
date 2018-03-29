@@ -52,7 +52,7 @@ Route::middleware(['auth', 'talk'])->group(function () {
 //kamer plaatsen
 Route::post('/newroom', 'RoomController@create');
 
-//Administrator, testing
+//Administrator
 Route::get('/phpinfo', 'AdminController@phpinfo');
 
 Route::get('/test', 'AdminController@test');
@@ -64,3 +64,5 @@ Route::get('/search', function (RoomsRepository $repository) {
     	'rooms' => $rooms,
     ]);
 });
+
+Route::get('/{locale}', 'LanguageController@switchLang');
