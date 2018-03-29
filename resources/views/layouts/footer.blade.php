@@ -10,7 +10,7 @@
       </div>
 
       <div class="footer">
-        <ul> <h4>Openingstijden</h4>
+        <ul> <h4>@lang('phrases.openinghours')</h4>
           <li> Maandag 8.30 – 17.00 </li>
           <li> Dinsdag 8.30 – 17.00 </li>
           <li> Woensdag 8.30 – 17.00 </li>

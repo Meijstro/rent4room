@@ -1,19 +1,19 @@
-<h2> Plaats een nieuwe kamer</h2><br>
+<h2> @lang('phrases.newRoom')</h2><br>
 
 <form action="/newroom" method="POST" enctype="multipart/form-data">
   {{ csrf_field() }}
   <div class="form-group">
-    <label for="street">Straat</label>
-    <input type="text" class="form-control" name="street" id="street" placeholder="bijv. Straatweg" value="{{ old('street') }}">
+    <label for="street">@lang('phrases.street')</label>
+    <input type="text" class="form-control" name="street" id="street" placeholder="@lang('phrases.example') Straatweg" value="{{ old('street') }}">
   </div>
 
   <div class="form-group">
-    <label for="number">Huisnummer</label>
-    <input type="text" class="form-control" name="housenumber" id="housenumber" placeholder="bijv. 11" value="{{ old('housenumber') }}">
+    <label for="number">@lang('phrases.housenumber')</label>
+    <input type="text" class="form-control" name="housenumber" id="housenumber" placeholder="@lang('phrases.example') 11" value="{{ old('housenumber') }}">
   </div>
 
   <div class="form-group">
-    <label for="dateavailable">Beschikbaar vanaf</label>
+    <label for="dateavailable">@lang('phrases.available')</label>
     <input type="text" class="form-control" name="date_available" id="datepicker" value="{{ old('date_available') }}">
   </div>
 
@@ -28,22 +28,22 @@
 
   <div class="form-group">
     <label for="postcode">Postcode</label>
-    <input type="text" class="form-control" name="postcode" id="postcode" placeholder="bijv. 1234 AB" value="{{ old('postcode') }}">
+    <input type="text" class="form-control" name="postcode" id="postcode" placeholder="@lang('phrases.example') 1234 AB" value="{{ old('postcode') }}">
   </div>
 
   <div class="form-group">
-    <label class="form-check-label" for="meters">Oppervlakte</label><br>
-    <input type="text" class="form-control" name="square_meter" id="square_meter" placeholder="bijv. 16" value="{{ old('square_meter') }}">
+    <label class="form-check-label" for="meters">@lang('phrases.squareMeter')</label><br>
+    <input type="text" class="form-control" name="square_meter" id="square_meter" placeholder="@lang('phrases.example') 16" value="{{ old('square_meter') }}">
  </div>
 
  <div class="form-group">
-   <label class="form-check-label" for="price">Huurprijs per maand (in Euro)</label><br>
-   <input type="text" class="form-control" name="price" id="price" placeholder="bijv. 300" value="{{ old('price') }}">
+   <label class="form-check-label" for="price">@lang('phrases.monthPrice')</label><br>
+   <input type="text" class="form-control" name="price" id="price" placeholder="@lang('phrases.example') 300" value="{{ old('price') }}">
  </div>
 
  <div class="form-group">
-   Selecteer foto's:<br>
+   @lang('phrases.images'):<br>
    <input type="file" id="image" name="images[]" multiple ><br>
  </div>
-  <button type="submit" class="btn btn-success">Plaats Kamer</button>
+  <button type="submit" class="btn btn-success">@lang('phrases.submit')</button>
 </form>

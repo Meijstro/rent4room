@@ -34,10 +34,10 @@
 
         <div class="chat-about">
             @if(isset($user))
-                <div class="chat-with">{{'Je chat met: ' . @$user->name}}</div>
-                <div class="chat-with">Betreft de kamer aan <a href="/kamer/{{$room->id}}" target="_blank" > {{$room->street}} {{$room->housenumber}}</a></div>
+                <div class="chat-with">@lang('phrases.chatWith') {{$user->name}}</div>
+                <div class="chat-with">@lang('phrases.concerningRoom') <a href="/kamer/{{$room->id}}" target="_blank" > {{$room->street}} {{$room->housenumber}}</a></div>
             @else
-                <div class="chat-with">Geen gesprek geselecteerd</div>
+                <div class="chat-with">@lang('phrases.noConvo')</div>
             @endif
         </div>
         <i class="fa fa-star"></i>
@@ -48,10 +48,10 @@
       @if(isset($user))
       <div class="chat-message clearfix">
       <form action="" method="post" id="talkSendMessage">
-            <textarea name="message-data" id="message-data" placeholder ="Type your message" rows="3"></textarea>
+            <textarea name="message-data" id="message-data" placeholder ="@lang('phrases.messagePlaceholder')" rows="3"></textarea>
             <input type="hidden" name="_id" value="{{@request()->route('userid')}}">
             <input type="hidden" name="room_id" value="{{@request()->route('roomid')}}">
-            <button type="submit">Send</button>
+            <button type="submit">@lang('phrases.send')</button>
       </form>
       @endif
       </div> <!-- end chat-message -->

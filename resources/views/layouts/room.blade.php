@@ -8,13 +8,13 @@
 
       <div class="card-body">
         <h4 class="card-title">{{$room->street}} {{$room->housenumber}}, {{$room->city->name}}<hr></h4>  </a>
-        <h5>Grootte: {{$room->square_meter}} m<sup>2</sup></h5>
-        <h5>Huur: {{$room->price}} € p/m</h5>
-        <h5>Aanbieder: {{$room->user->name}}</h5>
+        <h5>@lang('phrases.size'): {{$room->square_meter}} m<sup>2</sup></h5>
+        <h5>{{$room->price}} € p/m</h5>
+        <h5>@lang('phrases.owner'): {{$room->user->name}}</h5>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Geplaatst: {{$room->created_at->diffForHumans()}}</small><br />
-        <small class="text-muted">Beschikbaar vanaf: {{$room->date_available}}</small>
+        <small class="text-muted">@lang('phrases.submitted'): {{$room->created_at->diffForHumans()}}</small><br />
+        <small class="text-muted">@lang('phrases.available'): {{$room->date_available}}</small>
       </div>
 
   </div>

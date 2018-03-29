@@ -13,7 +13,7 @@
                       </div>
                   @endif
 
-                  Je bent ingelogd als @if (Auth::user()->premium == '1')  Premium @endif {{Auth::user()->role}}
+                  @lang('phrases.loggedInAs') @if (Auth::user()->premium == '1')  Premium @endif {{Auth::user()->role}}
                   <hr>
               </div>
               <div class="card-body">
@@ -21,12 +21,12 @@
                 @include('layouts.upgrade')
                 @else
                 @include ('layouts.alerts')
-                <h5><a href="/message/0">Berichten</a></h5><br>
+                <h5><a href="/message/0">@lang('phrases.messages')</a></h5><br>
                 <hr>
                   @if (Auth::user()->role == 'Verhuurder')
                     @include ('layouts.addroom')
                   @elseif (Auth::user()->role == 'Huurder')
-                  <h5><a href="/kamers">Bekijk het kameraanbod</a></h5><br>
+                  <h5><a href="/kamers">@lang('phrases.roomsCTA')</a></h5><br>
                   @endif
                 @endif
               </div>
