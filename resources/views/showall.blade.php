@@ -4,6 +4,8 @@
 
   @include('layouts.nav')
 
+  @include('layouts.navigatie')
+
   @include('layouts.searchbar')
 
 

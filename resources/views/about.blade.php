@@ -27,7 +27,7 @@
 
     <p>Room4Rent onderscheidt zich van andere kameraanbieders door een gerichte doelgroep te kiezen
       en daarbij lage kosten in rekening te brengen. Wij brengen eenmalig 12,50 in rekening waarmee de klant premium wordt
-       en zo de kamers kan verhuren of huren. </p>
+       en zo een kamer kan verhuren of huren. </p>
 
     <p>We blijven als bedrijf niet stilstaan en investeren in het zoeken
        naar potentiele huurder en verhuurders om zo een divers mogelijk
