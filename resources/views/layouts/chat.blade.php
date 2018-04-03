@@ -22,7 +22,7 @@
   <body>
 <div class="header">
     <div class="container header-brand">
-        <p class="brand">Room4Rent Chat</p>
+          <a href="/">Go back</a>
     </div>
 </div>
     @if ($message = Session::get('alert'))
