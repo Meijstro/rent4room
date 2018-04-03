@@ -4,6 +4,10 @@
 
   @include('layouts.nav')
 
+  @include('layouts.navigatie')
+
+  @include('layouts.searchbar')
+
 
   <div class="container">
     <div class="panel panel-primary" align="center">

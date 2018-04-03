@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="{{asset('chat/css/reset.css')}}">
 
+    <link rel="stylesheet" href="css/style.css" rel="stylesheet">
+
     <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
 
     <link rel="stylesheet" href="{{asset('chat/css/style.css')}}">
