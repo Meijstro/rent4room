@@ -218,12 +218,12 @@ h2 {
    }
 
    .form-wrapper button:hover{
-       background: #e54040;
+       background: #d54d7b;
    }
 
    .form-wrapper button:active,
    .form-wrapper button:focus{
-       background: #c42f2f;
+       background: #d54d7b;
    }
 
    .form-wrapper button:before {
@@ -237,11 +237,11 @@ h2 {
    }
 
    .form-wrapper button:hover:before{
-       border-right-color: #e54040;
+       border-right-color: #d54d7b;
    }
 
    .form-wrapper button:focus:before{
-       border-right-color: #c42f2f;
+       border-right-color: #d54d7b;
    }
 
    .form-wrapper button::-moz-focus-inner {
