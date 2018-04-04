@@ -21,44 +21,59 @@
 
 
                 @include('layouts.nav')
+<hr>
 
 
+<div class="container">
+    <div class="row my-4">
+        <div class="col-lg-8">
+          <img class="img-fluid rounded" height="100%" width="100%" src="{{asset($room->photos->first()['filename'])}}"
+          alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
 
-      <div class='card'>
-        <img height="100%" width="100%" src="{{asset($room->photos->first()['filename'])}}"
-        alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
+            @foreach ($room->photos as $photo)
 
-        @foreach ($room->photos as $photo)
-        <div>
-        <img height="20%" width="20%" src="{{asset($room->photos->first()['filename'])}}"
-        alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
+          <div>
+            <img class="img-fluid rounded" height="20%" width="20%" src="{{asset($room->photos->first()['filename'])}}"
+            alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
+          </div>
+
+            @endforeach
+
         </div>
-        @endforeach
+
+        <div class="col-lg-4">
+              <h4 class="card-title">{{$room->street}} {{$room->housenumber}}, {{$room->city->name}}<hr></h4>
+              <h5>Grootte: <small>{{$room->square_meter}} m</small><sup>2</sup></h5>
+              <h5>Huur: <small>{{$room->price}} € p/m</small></h5>
+              <h5>Aanbieder: <small>{{$room->user->name}}</small></h5>
+              <h5>Locatie: </h5>
+
+                @include('layouts.googlemap')
+
+        </div>
       </div>
-      <div class="card-body">
-        <h4 class="card-title">{{$room->street}} {{$room->housenumber}}, {{$room->city->name}}<hr></h4>
-        <h5>Grootte: {{$room->square_meter}} m<sup>2</sup></h5>
-        <h5>Huur: {{$room->price}} € p/m</h5>
-        <h5>Aanbieder: {{$room->user->name}}</h5>
-      </div>
+
       <div class="card-footer">
         <small class="text-muted">Online since: {{$room->created_at->diffForHumans()}}</small>
-        <h4>Beschikbaar vanaf: {{$room->date_available}}</h4>
+          <h4>Beschikbaar vanaf: <small>{{$room->date_available}}</small></h4>
       </div>
+    </div>
+  </div>
+</div>
 
       <div class="card">
           @if (Auth::check() && $room->user->id == Auth::user()->id)
-          <h4><a href="/kamer/{{$room->id}}/aanpassen">Update deze kamer</a></h4>
+          <p><strong> <a href="/kamer/{{$room->id}}/aanpassen">Update deze kamer</a></strong></p>
           @elseif (Auth::check() && Auth::user()->premium == '1')
-          <h2><a href="/message/{{$room->user->id}}/{{$room->id}}">Reageer op deze kamer</a></h2>
+            <p><strong><a href="/message/{{$room->user->id}}/{{$room->id}}">Reageer op deze kamer</a></strong></p>
           @elseif (Auth::check())
-          <h2><a href="/dashboard">Upgrade je Account om te kunnen reageren</a></h2>
+          <p><strong><a href="/dashboard">Upgrade je Account </a> om te kunnen reageren</strong></p>
           @else
           <p><strong> <a href="/login">Log in</a> of <a href="/register">registeer</a></strong></p>
           @endif
       </div>
 
-      @include('layouts.googlemap')
+    </div>
 
             <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

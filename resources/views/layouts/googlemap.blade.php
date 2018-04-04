@@ -1,4 +1,4 @@
-<div id="map" style="height: 500px; width: 800px;"></div>
+<div id="map" style=" width: 100%; height:200px;" class="mw-80"></div>
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
