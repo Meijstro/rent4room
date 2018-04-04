@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@include('layouts.nav')
-
 @section('content')
 <main class="py-4">
 <div class="container">
