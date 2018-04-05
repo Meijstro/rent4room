@@ -6,7 +6,7 @@
         <button type="submit">Search</button>
         <select>
           <option value="{{ request('0') }}">Oppervlakte:</option>
-          <option value="1"> <6m2</option>
+          <option "{{ request('1') }}"> <6m2</option>
         </select>
         <select>
           <option value="0">Prijs:</option>
