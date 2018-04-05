@@ -42,6 +42,11 @@
  </div>
 
  <div class="form-group">
+   <label class="form-check-label" for="description">@lang('phrases.optional'):@lang('phrases.description')/extra info</label><br>
+   <textarea id="description" class="form-control" rows="5" name="description" type="text">{{ old('description') }}</textarea>
+  </div>
+
+ <div class="form-group">
    @lang('phrases.images'):<br>
    <input type="file" id="image" name="images[]" multiple ><br>
  </div>

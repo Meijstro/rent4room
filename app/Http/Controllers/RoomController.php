@@ -55,6 +55,7 @@ class RoomController extends Controller
         'square_meter' => request('square_meter'),
         'price' => request('price'),
         'date_available' => request('date_available'),
+        'description' => request('description'),
         'user_id' => auth()->id(),
       ]);
 

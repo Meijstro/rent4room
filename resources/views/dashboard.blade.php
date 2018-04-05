@@ -5,7 +5,7 @@
 
       <div class="col-md-8">
           <div class="card">
-              <div class="card-header">Dashboard</div>
+              <div class="card-header">Hi, {{Auth::user()->name}}</div>
               <div class="card-body">
                   @if (session('status'))
                       <div class="alert alert-success">
@@ -20,7 +20,7 @@
 
                   @endif
 
-                  @lang('phrases.loggedInAs') @if (Auth::user()->premium == '1')  Premium @endif {{Auth::user()->role}}
+                  @lang('phrases.loggedInAs'): @if (Auth::user()->premium == '1')  Premium @endif {{Auth::user()->role}}
                   <hr>
               </div>
               <div class="card-body">

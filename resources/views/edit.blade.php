@@ -20,7 +20,7 @@
     </div>
 
     <div class="form-group">
-      <label for="dateavailable">@lang('phrases.')</label>
+      <label for="dateavailable">@lang('phrases.available')</label>
       <input type="text" class="form-control" name="date_available" id="datepicker" value="{{ $room->date_available }}">
     </div>
 
@@ -48,6 +48,11 @@
      <label class="form-check-label" for="price">@lang('phrases.monthPrice')</label><br>
      <input type="text" class="form-control" name="price" id="price" placeholder="bijv. 300" value="{{ $room->price }}">
    </div>
+
+   <div class="form-group">
+     <label class="form-check-label" for="description">@lang('phrases.optional'):@lang('phrases.description')/extra info</label><br>
+     <textarea id="description" class="form-control" rows="10" name="description" type="text">{{$room->description}}</textarea>
+    </div>
 
    <div class="form-group">
      Nieuwe foto's toevoegen:<br>

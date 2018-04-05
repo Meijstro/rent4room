@@ -18,9 +18,6 @@ class AdminController extends Controller
 
     public function test()
     {
-      $room = Room::find(3);
-      dd($room->user_id);
-      $user = User::where('id', Auth::id())
-          ->update(['premium' => 1]);
+      //
     }
 }
