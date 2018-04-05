@@ -12,16 +12,26 @@
                           {{ session('status') }}
                       </div>
                   @endif
+                  @if ($message = Session::get('alert'))
+
+                    <div class="alert alert-warning">
+                        <p>{!! $message !!}</p>
+                    </div>
+
+                  @endif
 
                   @lang('phrases.loggedInAs') @if (Auth::user()->premium == '1')  Premium @endif {{Auth::user()->role}}
                   <hr>
               </div>
               <div class="card-body">
                 @if (Auth::user()->premium == '0')
+                Upgrade je Account:
                 @include('layouts.upgrade')
+                of<br>
+                <a href="/upgrade/ideal">Via iDeal</a>
                 @else
                 @include ('layouts.alerts')
-                <h5><a href="/message/0">@lang('phrases.messages')</a></h5><br>
+                <h5><a href="/message/0" target="_blank">@lang('phrases.messages')</a></h5><br>
                 <hr>
                   @if (Auth::user()->role == 'Verhuurder')
                     @include ('layouts.addroom')

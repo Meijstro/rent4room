@@ -13,10 +13,7 @@
 
     <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
 
-        <link rel="stylesheet" href="{{asset('chat/css/style.css')}}">
-
-
-
+    <link rel="stylesheet" href="{{asset('chat/css/style.css')}}">
 
   </head>
 
@@ -26,6 +23,15 @@
         <p class="brand">Room4Rent Chat</p>
     </div>
 </div>
+    @if ($message = Session::get('alert'))
+    <div class="header">
+      <div class="container header-brand">
+        <p class="brand">{!! $message !!}</p>
+      </div>
+    </div>
+
+    @endif
+
       <div class="container clearfix body">
    @include('messages.peoplelist')
 

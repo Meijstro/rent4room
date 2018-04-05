@@ -96,40 +96,50 @@ class RoomController extends Controller
     }
 
     public function update(UploadRequest $request, $id)
-      {
-        $this->validate(request(), [
-          'street' => 'required',
-          'housenumber' => 'required|digits_between:1,4',
-          'city_id' => 'required',
-          'postcode' => 'required|regex:/^[1-9][0-9]{3}[\s]?[A-Za-z]{2}$/i',
-          'square_meter' => 'required|digits_between:1,2',
-          'price' => 'required|digits_between:2,4',
-          'images.*' => 'image|max:5048',
-          'date_available' => 'required|date',
-        ]);
+    {
+      $this->validate(request(), [
+        'street' => 'required',
+        'housenumber' => 'required|digits_between:1,4',
+        'city_id' => 'required',
+        'postcode' => 'required|regex:/^[1-9][0-9]{3}[\s]?[A-Za-z]{2}$/i',
+        'square_meter' => 'required|digits_between:1,2',
+        'price' => 'required|digits_between:2,4',
+        'images.*' => 'image|max:5048',
+        'date_available' => 'required|date',
+      ]);
 
-        Room::find($id)->update([
-          'street' => request('street'),
-          'housenumber' => request('housenumber'),
-          'city_id' => request('city_id'),
-          'postcode' => request('postcode'),
-          'square_meter' => request('square_meter'),
-          'price' => request('price'),
-          'date_available' => request('date_available'),
-          'user_id' => auth()->id(),
-        ]);
+      Room::find($id)->update([
+        'street' => request('street'),
+        'housenumber' => request('housenumber'),
+        'city_id' => request('city_id'),
+        'postcode' => request('postcode'),
+        'square_meter' => request('square_meter'),
+        'price' => request('price'),
+        'date_available' => request('date_available'),
+        'user_id' => auth()->id(),
+      ]);
 
-        if(isset($request->images)){
-        foreach ($request->images as $image){
-          $filename = $image->store('public');
-          PhotosRoom::create([
-              'room_id' => $id,
-              'filename' => Storage::url($filename)
-            ]);
-          }
+      if(isset($request->images)){
+      foreach ($request->images as $image){
+        $filename = $image->store('public');
+        PhotosRoom::create([
+            'room_id' => $id,
+            'filename' => Storage::url($filename)
+          ]);
         }
+      }
 
       return redirect("/kamer/".$id);
+    }
+
+    public function destroy($id)
+    {
+      Room::find($id)->delete();
+
+      Conversation::where('room_id', $id)->delete();
+
+      return redirect('/dashboard')
+        ->with('success', 'De kamer is verwijderd.');
     }
 
 }

@@ -55,6 +55,17 @@
    </div>
     <button type="submit" class="btn btn-success">@lang('phrases.editSubmit')</button>
   </form>
+  <hr>
+  <div class="container-fluid">
+<form method="post" action="{{action('RoomController@destroy', $room->id)}}" style="float:right">
+  {{csrf_field()}}
+
+  <input name="_method" type="hidden" value="DELETE">
+
+  <span><strong><em>Let op</strong></em>: kamer zal permanent worden verwijderd.</span>
+  <button class='btn btn-danger' type="submit" >Delete</button>
+</form>
+</div>
 </div>
 <br><br>
 @endsection
