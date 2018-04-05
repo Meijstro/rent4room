@@ -57,8 +57,9 @@ Route::get('/phpinfo', 'AdminController@phpinfo');
 
 Route::get('/test', 'AdminController@test');
 
+//search form
 Route::get('/search', function (RoomsRepository $repository) {
-    $rooms = $repository->search((string) request('q'));
+    $rooms = $repository->search((string) request('q','0'));
 
     return view('showall', [
     	'rooms' => $rooms,

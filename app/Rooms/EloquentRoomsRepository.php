@@ -11,6 +11,7 @@ class EloquentRoomsRepository implements RoomsRepository
     {
         return Room::where('street', 'like', "%{$query}%")
             ->orWhere('postcode', 'like', "%{$query}%")
+            ->orWhere('square_meter', 'like', "%{$query}%")
             ->get();
     }
 }

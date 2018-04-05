@@ -8,9 +8,9 @@
 
       <div class="card-body">
         <h4 class="card-title">{{$room->street}} {{$room->housenumber}}, {{$room->city->name}}<hr></h4>  </a>
-        <h5>Grootte: {{$room->square_meter}} m<sup>2</sup></h5>
-        <h5>Huur: {{$room->price}} € p/m</h5>
-        <h5>Aanbieder: {{$room->user->name}}</h5>
+        <h5>Grootte: <small>{{$room->square_meter}} m</small><sup>2</sup></h5>
+        <h5>Huur: <small>{{$room->price}} € p/m</small></h5>
+        <h5>Aanbieder: <small>{{$room->user->name}}</small></h5>
       </div>
       <div class="card-footer">
         <small class="text-muted">Geplaatst: {{$room->created_at->diffForHumans()}}</small><br />
