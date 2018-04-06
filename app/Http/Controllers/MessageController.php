@@ -99,11 +99,4 @@ class MessageController extends Controller
       return json_encode($data);
       }
 
-    public function test()
-    {
-      $test = Talk::threads();
-      $findRoom = Conversation::find($convo)->room_id;
-      $room = Room::find($findRoom);
-      dd($test);
-    }
 }

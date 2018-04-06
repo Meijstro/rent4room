@@ -5,19 +5,4 @@
 
         <button type="submit">Search</button>
       </form>
-
-      <!-- <div>
-        <form>
-          <select>
-            <option value="{{ request('0') }}">Oppervlakte:</option>
-            <option "{{ request('1') }}"> <6m2</option>
-          </select>
-          <select>
-            <option value="0">Prijs:</option>
-            <option value="1"> <100€</option>
-          </select>
-          <button type="submit">Search</button>
-        </form>
-      </div>
-      <hr> -->
 </div>

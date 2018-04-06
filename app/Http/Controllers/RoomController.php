@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\UploadRequest;
 use App\Room;
 use App\User;
@@ -18,6 +18,11 @@ class RoomController extends Controller
       $this->middleware('auth')->except(['index', 'showall', 'show']);
     }
 
+    public function index()
+    {
+      return view('welcome', compact('rooms'));
+    }
+
     public function showall()
     {
       $rooms = Room::latest('created_at')->with('photos')->get();
@@ -25,11 +30,23 @@ class RoomController extends Controller
       return view('showall', compact('rooms'));
     }
 
-    public function index()
+    public function map()
     {
-      $rooms = Room::latest('created_at')->with('photos')->get();
+      $rooms = DB::table('rooms')
+        ->select('id', 'postcode', 'street', 'housenumber', 'square_meter', 'price')
+          ->get();
 
-      return view('welcome', compact('rooms'));
+      $data = [];
+      foreach ($rooms as $r) {
+        $d[0] = $r->id;
+        $d[1] = $r->postcode;
+        $d[2] = "<strong>".$r->street." ".$r->housenumber."</strong><br />Oppervlakte: "
+                .$r->square_meter."<sup>m2</sup><br />Huur: ".$r->price."<small> € p/m</small";
+        $data[] = $d;
+      }
+      $rooms = json_encode($data);
+
+      return view('bigmap', compact('rooms'));
     }
 
 

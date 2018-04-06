@@ -38,6 +38,7 @@ return [
   'rooms' => 'Rooms',
   'search' => 'Search',
   'searchPlaceholder' => 'Search here...',
+	'bigmap' => 'View the overview map',
   'updateHREF' => 'Update this room',
   'respond' => 'Respond to this room',
   'upgradeCTA' => 'Upgrade your account to respond to this room',

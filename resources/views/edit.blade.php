@@ -24,7 +24,7 @@
       <input type="text" class="form-control" name="date_available" id="datepicker" value="{{ $room->date_available }}">
     </div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="city">Selecteer stad</label> <br>
       <select name="city_id">
         <option selected="selected" value="{{$room->city->id}}">{{$room->city->name}}</option>
@@ -32,7 +32,7 @@
           <option value="{{$city->id}}">{{$city->name}}</option>
         @endforeach
       </select>
-    </div>
+    </div> -->
 
     <div class="form-group">
       <label for="postcode">Postcode</label>
