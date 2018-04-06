@@ -15,3 +15,9 @@
 
       </form>
   </div>
+
+  <div style="margin-top: -3%;" class="panel panel-primary" align="center">
+        <div style="padding: 2px; padding-top: 10px;" class="form-wrapper cf">
+          <a href="/kamers/kaart"><h4>@lang('phrases.bigmap')<h4></a>
+        </div>
+    </div>

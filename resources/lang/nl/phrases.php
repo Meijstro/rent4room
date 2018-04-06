@@ -38,6 +38,7 @@ return [
   'rooms' => 'Kamers',
   'search' => 'Zoeken',
   'searchPlaceholder' => 'Zoek hier...',
+	'bigmap' => 'Bekijk de overzichtskaart',
   'updateHREF' => 'Pas deze kamer aan',
   'respond' => 'Reageer op deze kamer',
   'upgradeCTA' => 'Upgrade je account om te kunnen reageren',

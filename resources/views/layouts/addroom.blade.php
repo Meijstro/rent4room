@@ -16,7 +16,7 @@
     <label for="dateavailable">@lang('phrases.available')</label>
     <input type="text" class="form-control" name="date_available" id="datepicker" value="{{ old('date_available') }}">
   </div>
-
+<!--
   <div class="form-group">
     <label for="city">Selecteer stad</label> <br>
     <select name="city_id">
@@ -24,7 +24,9 @@
         <option value="{{$city->id}}">{{$city->name}}</option>
       @endforeach
     </select>
-  </div>
+  </div> -->
+
+  <input name=city_id type="hidden" value="1">
 
   <div class="form-group">
     <label for="postcode">Postcode</label>
