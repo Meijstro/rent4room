@@ -14,4 +14,6 @@ class EloquentRoomsRepository implements RoomsRepository
             ->orWhere('square_meter', 'like', "%{$query}%")
             ->get();
     }
+
+  
 }

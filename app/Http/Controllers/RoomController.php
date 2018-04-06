@@ -96,6 +96,8 @@ class RoomController extends Controller
       }
     }
 
+    
+
     public function update(UploadRequest $request, $id)
     {
       $this->validate(request(), [
