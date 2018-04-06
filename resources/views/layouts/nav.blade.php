@@ -15,11 +15,11 @@
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about">Over ons</a>
+                <a class="nav-link" href="/about">@lang('phrases.about')</a>
             </li>
             <li class="nav-item">
       @guest
-                <a class="nav-link" href="{{ route('register') }}">Inschrijven</a>
+                <a class="nav-link" href="{{ route('register') }}">@lang('phrases.register')</a>
       @else
                 <a class="nav-link" href="/dashboard">Dashboard</a>
       @endguest
@@ -31,7 +31,7 @@
       @else
 
             <li class="nav-item dropdown">
-              <a class="nav-link" href="/message/0">Berichten</a>
+              <a class="nav-link" href="/message/0">@lang('phrases.messages')</a>
             </li>
             <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

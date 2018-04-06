@@ -13,8 +13,8 @@
         <h5>Aanbieder: <small>{{$room->user->name}}</small></h5>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Geplaatst: {{$room->created_at->diffForHumans()}}</small><br />
-        <small class="text-muted">Beschikbaar vanaf: {{$room->date_available}}</small>
+        <small class="text-muted">@lang('phrases.submitted'): {{$room->created_at->diffForHumans()}}</small><br />
+        <small class="text-muted">@lang('phrases.available'): {{$room->date_available}}</small>
       </div>
 
   </div>

@@ -4,23 +4,23 @@
 
 <div class="container">
 
-  <h2> Pas deze kamer aan </h2><br>
+  <h2> @lang('phrases.editRoom') </h2><br>
 
   <form action="/update/{{$id}}" method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
     <input name="_method" type="hidden" value="PATCH">
     <div class="form-group">
-      <label for="street">Straat</label>
+      <label for="street">@lang('phrases.street')</label>
       <input type="text" class="form-control" name="street" id="street" placeholder="bijv. Straatweg" value="{{ $room->street }}">
     </div>
 
     <div class="form-group">
-      <label for="number">Huisnummer</label>
+      <label for="number">@lang('phrases.housenumber')</label>
       <input type="text" class="form-control" name="housenumber" id="housenumber" placeholder="bijv. 11" value="{{ $room->housenumber }}">
     </div>
 
     <div class="form-group">
-      <label for="dateavailable">Beschikbaar vanaf</label>
+      <label for="dateavailable">@lang('phrases.')</label>
       <input type="text" class="form-control" name="date_available" id="datepicker" value="{{ $room->date_available }}">
     </div>
 
@@ -40,12 +40,12 @@
     </div>
 
     <div class="form-group">
-      <label class="form-check-label" for="meters">Oppervlakte</label><br>
+      <label class="form-check-label" for="meters">@lang('phrases.squareMeter')</label><br>
       <input type="text" class="form-control" name="square_meter" id="square_meter" placeholder="bijv. 16" value="{{ $room->square_meter }}">
    </div>
 
    <div class="form-group">
-     <label class="form-check-label" for="price">Huurprijs per maand (in Euro)</label><br>
+     <label class="form-check-label" for="price">@lang('phrases.monthPrice')</label><br>
      <input type="text" class="form-control" name="price" id="price" placeholder="bijv. 300" value="{{ $room->price }}">
    </div>
 
@@ -53,8 +53,19 @@
      Nieuwe foto's toevoegen:<br>
      <input type="file" id="image" name="images[]" multiple ><br>
    </div>
-    <button type="submit" class="btn btn-success">Update Kamer</button>
+    <button type="submit" class="btn btn-success">@lang('phrases.editSubmit')</button>
   </form>
+  <hr>
+  <div class="container-fluid">
+<form method="post" action="{{action('RoomController@destroy', $room->id)}}" style="float:right">
+  {{csrf_field()}}
+
+  <input name="_method" type="hidden" value="DELETE">
+
+  <span><strong><em>Let op</strong></em>: kamer zal permanent worden verwijderd.</span>
+  <button class='btn btn-danger' type="submit" >Delete</button>
+</form>
+</div>
 </div>
 <br><br>
 @endsection

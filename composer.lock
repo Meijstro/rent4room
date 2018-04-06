@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "313927cd1107c4c15d14c7ec3ebde040",
+    "content-hash": "6cb2c26f9e32a072417e88889ad3bffc",
     "packages": [
         {
             "name": "coliving/talk",
@@ -886,6 +886,47 @@
             "time": "2017-06-19T01:22:40+00:00"
         },
         {
+            "name": "multisafepay/api",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MultiSafepay/PHP.git",
+                "reference": "d6235f2dbeb723b79c7a845ff5c58e775ce28f13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MultiSafepay/PHP/zipball/d6235f2dbeb723b79c7a845ff5c58e775ce28f13",
+                "reference": "d6235f2dbeb723b79c7a845ff5c58e775ce28f13",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MultiSafepayAPI\\": "models/API"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MultiSafepay",
+                    "email": "developer@multisafepay.com",
+                    "homepage": "https://www.multisafepay.com"
+                }
+            ],
+            "description": "A PHP wrapper for the MultiSafepay payments API. Provides support for all payment methods, Pay After Delivery and Fast Checkout.",
+            "homepage": "https://github.com/MultiSafepay/PHP",
+            "keywords": [
+                "multisafeapy json",
+                "multisafepay",
+                "multisafepay api",
+                "php"
+            ],
+            "time": "2017-08-07T14:18:46+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "1.24.2",
             "source": {
@@ -1036,6 +1077,50 @@
                 "random"
             ],
             "time": "2017-09-27T21:40:39+00:00"
+        },
+        {
+            "name": "paypro/paypro-php-v1",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paypronl/paypro-php-v1.git",
+                "reference": "dc4ad610e7be219e486dee8e2ea759a909ab003d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paypronl/paypro-php-v1/zipball/dc4ad610e7be219e486dee8e2ea759a909ab003d",
+                "reference": "dc4ad610e7be219e486dee8e2ea759a909ab003d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">= 5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PayPro\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PayPro",
+                    "homepage": "https://paypro.nl"
+                }
+            ],
+            "description": "Client for PayPro API v1",
+            "homepage": "https://paypro.nl",
+            "keywords": [
+                "api",
+                "payment processing",
+                "paypro"
+            ],
+            "time": "2017-08-25T13:45:50+00:00"
         },
         {
             "name": "psr/container",

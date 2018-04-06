@@ -6,6 +6,14 @@
 
   @endif
 
+  @if ($message = Session::get('alert'))
+
+    <div class="alert alert-info">
+        <p>{!! $message !!}</p>
+    </div>
+
+    @endif
+
   @if (count($errors))
 
   <div class="form-group">

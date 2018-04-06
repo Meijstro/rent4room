@@ -14,15 +14,15 @@
                         @csrf
 
                         <div class="form-group">
-                          <label for="role" class="col-md-4 col-form-label text-md-right"> Ik ben een: </label>
+                          <label for="role" class="col-md-4 col-form-label text-md-right"> @lang('phrases.iam'): </label>
                           <select name="role">
-                            <option value="Huurder">Huurder</option>
-                            <option value="Verhuurder">Verhuurder</option>
+                            <option value="Huurder">@lang('phrases.renter')</option>
+                            <option value="Verhuurder">@lang('phrases.owner')</option>
                           </select>
 
                         </div>
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">@lang('phrases.name')</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -36,7 +36,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">@lang('phrases.email')</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">@lang('phrases.pwd')</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">@lang('phrases.confirmPwd')</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -74,7 +74,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    @lang('phrases.register')
                                 </button>
                             </div>
                         </div>

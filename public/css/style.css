@@ -5,7 +5,9 @@
   min-width: 25%;
 
 }
-
+#taal{
+float: right;
+}
 .nav {
     background-color: #008e5a;
     width: 100%;

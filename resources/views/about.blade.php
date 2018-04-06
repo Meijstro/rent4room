@@ -18,7 +18,7 @@
 
   <div class="about">
 
-    <h2> Over ons </h2>
+    <h2> @lang('phrases.about') </h2>
 
     <p style font-weight="bold">Sinds 2018 is Room4Rent Vastgoed actief op de kamermarkt.
       Door de hoge vraag van studentenkamers in Groningen is er besloten
