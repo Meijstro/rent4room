@@ -11,13 +11,13 @@
       <div class="row my-4">
           <div class="col-lg-8">
             <img class="img-fluid rounded" height="100%" width="100%" src="{{asset($room->photos->first()['filename'])}}"
-            alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
+            alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='/defaultroom.jpg';" />
 
               @foreach ($room->photos as $photo)
 
             <div>
               <img class="img-fluid rounded" height="20%" width="20%" src="{{asset($room->photos->first()['filename'])}}"
-              alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='http://goo.gl/5uVMCa';" />
+              alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='/defaultroom.jpg';" />
             </div>
 
               @endforeach
