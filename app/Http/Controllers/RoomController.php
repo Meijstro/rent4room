@@ -15,7 +15,7 @@ class RoomController extends Controller
 {
     public function __construct()
     {
-      $this->middleware('auth')->except(['index', 'showall', 'show']);
+      $this->middleware('auth')->except(['index', 'showall', 'show', 'map']);
     }
 
     public function index()
@@ -113,7 +113,7 @@ class RoomController extends Controller
       }
     }
 
-    
+
 
     public function update(UploadRequest $request, $id)
     {
