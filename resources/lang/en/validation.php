@@ -65,6 +65,7 @@ return [
         'array'   => 'The :attribute must have at least :min items.',
     ],
     'not_in'               => 'The selected :attribute is invalid.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => 'The :attribute must be a number.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'The :attribute format is invalid.',
@@ -100,10 +101,28 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'street' => [
+          'required' => 'We are missing some information. Check whether you have entered the street name',
         ],
-    ],
+        'housenumber' => [
+          'required' => 'We are missing some information. Check whether you have entered the house number',
+        ],
+        'city_id' => [
+          'required' => 'We are missing some information. Check whether you have selected the city',
+        ],
+        'postcode' => [
+          'required' => 'We are missing some information. Check whether you have entered the postcode',
+        ],
+        'square_meter' => [
+          'required' => 'We are missing some information. Check whether you have entered the square meters',
+        ],
+        'price' => [
+          'required' => 'We are missing some information. Check whether you have entered the monthly price',
+        ],
+        'date_available' => [
+          'required' => 'We are missing some information. Check whether you have entered the date of availability.',
+        ],
+  ],
 
     /*
     |--------------------------------------------------------------------------
