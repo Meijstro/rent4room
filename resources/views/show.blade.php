@@ -32,22 +32,23 @@
                 <h5>Locatie: </h5>
 
                   @include('layouts.googlemap')
-
+                <br><br>
+                @if (Auth::check() && $room->user->id == Auth::user()->id)
+                <p><strong> <a href="/kamer/{{$room->id}}/aanpassen">Update deze kamer</a></strong></p>
+                @elseif (Auth::check() && Auth::user()->premium == '1')
+                  <p><strong><a href="/message/{{$room->user->id}}/{{$room->id}}">Reageer op deze kamer</a></strong></p>
+                @elseif (Auth::check())
+                <p><strong><a href="/dashboard">Upgrade je Account </a> om te kunnen reageren</strong></p>
+                @else
+                <p><strong> <a href="/login">Log in</a> of <a href="/register">registeer</a></strong></p>
+                @endif
           </div>
         </div>
 
         <div class="card-footer">
           <small class="text-muted">Online since: {{$room->created_at->diffForHumans()}}</small>
             <h5>Beschikbaar vanaf: <small>{{$room->date_available}}</small></h5><hr>
-            @if (Auth::check() && $room->user->id == Auth::user()->id)
-            <p><strong> <a href="/kamer/{{$room->id}}/aanpassen">Update deze kamer</a></strong></p>
-            @elseif (Auth::check() && Auth::user()->premium == '1')
-              <p><strong><a href="/message/{{$room->user->id}}/{{$room->id}}">Reageer op deze kamer</a></strong></p>
-            @elseif (Auth::check())
-            <p><strong><a href="/dashboard">Upgrade je Account </a> om te kunnen reageren</strong></p>
-            @else
-            <p><strong> <a href="/login">Log in</a> of <a href="/register">registeer</a></strong></p>
-            @endif
+            <p>{{$room->description}}</p>
         </div>
       </div>
     </div>

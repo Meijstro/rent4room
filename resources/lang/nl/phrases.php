@@ -26,6 +26,8 @@ return [
   'available' => 'Beschikbaar vanaf',
   'squareMeter' => 'Oppervlakte (vierkante meters)',
   'monthPrice' => 'Huurprijs per maand (in Euro)',
+	'optional' => 'Optioneel',
+	'description' => 'omschrijving',
   'images' => 'Selecteer foto\'s',
   'submit' => 'Plaats Kamer',
   'roomsCTA' => 'Bekijk het actuele kamer aanbod!',

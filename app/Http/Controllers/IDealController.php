@@ -17,22 +17,21 @@ class IDealController extends Controller
 
   public function index()
   {
-    $user = User::where('id', Auth::id())
+    $setCode = User::where('id', Auth::id())
         ->update(['ideal_code' => str_random(10)]);
-
-    $userCode = User::find(Auth::id())->ideal_code;
+    $user = User::find(Auth::id());
 
     $client = new \PayPro\Client(env('PAYPRO_API_KEY'));
     $client->setCommand("create_payment");
     $client->setParams(array(
       "amount" => 1250,
       "pay_method" => "",
-      "consumer_name" => "",
-      "consumer_email" => "",
+      "consumer_name" => $user->name,
+      "consumer_email" => $user->email,
       "description" => "Room4Rent: Account Upgrade",
       "cancel_url" => env("APP_URL")."/dashboard",
-      "return_url" => env("APP_URL")."/upgrade/paymentcomplete/".$userCode,
-      "custom" => "".auth()->id(),
+      "return_url" => env("APP_URL")."/upgrade/paymentcomplete/".$user->ideal_code,
+      "remarks" => "user_id: ".auth()->id(),
       "test_mode" => true,
     ));
 

@@ -26,6 +26,8 @@ return [
   'available' => 'Available from',
   'squareMeter' => 'Size (square meters)',
   'monthPrice' => 'Monthly rent (in Euros)',
+	'optional' => 'Optional',
+	'description' => 'description',
   'images' => 'Select photos',
   'submit' => 'Add Room',
   'roomsCTA' => 'Check out the rooms on offer!',
