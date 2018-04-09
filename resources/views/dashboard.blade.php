@@ -1,6 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('content')
+@include('layouts.nav')
+
+@include('layouts.navigatie')
+<br>
 <div class="container">
 
       <div class="col-md-8">

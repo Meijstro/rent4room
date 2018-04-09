@@ -4,8 +4,15 @@
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15"
         aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <span><a href="/"><img src="/Room4Rent.png"></a></span>
 
+          <span><a href="/"><img src="/Room4Rent.png"></a></span>
+<div>
+  <ul id="menu-standard" class="languagepicker roundborders">
+
+       <a href="/nl"><li><img src="http://i65.tinypic.com/2d0kyno.png"/>Nederlands</li></a>
+       <a href="/en"><li><img src="http://i64.tinypic.com/fd60km.png"/>English</li></a>
+  </ul>
+</div>
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent15">
 

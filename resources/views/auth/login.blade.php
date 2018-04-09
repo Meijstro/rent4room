@@ -1,6 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('content')
+@include('layouts.nav')
+
+@include('layouts.navigatie')
+
 <main class="py-4">
 <div class="container">
     <div class="row justify-content-center">

@@ -25,19 +25,31 @@ class RoomController extends Controller
 
     public function showall()
     {
-      $rooms = Room::latest('created_at')->with('photos')->get();
-
-      return view('showall', compact('rooms'));
-    }
-
-    public function map()
-    {
-      $rooms = DB::table('rooms')
+      $units = DB::table('rooms')
         ->select('id', 'postcode', 'street', 'housenumber', 'square_meter', 'price')
           ->get();
 
       $data = [];
-      foreach ($rooms as $r) {
+      foreach ($units as $r) {
+        $d[0] = $r->id;
+        $d[1] = $r->postcode;
+        $d[2] = "<strong>".$r->street." ".$r->housenumber."</strong><br />Oppervlakte: "
+                .$r->square_meter."<sup>m2</sup><br />Huur: ".$r->price."<small> € p/m</small";
+        $data[] = $d;
+      }
+      $units = json_encode($data);
+      $rooms = Room::latest('created_at')->with('photos')->get();
+      return view('showall', compact('rooms', 'units'));
+    }
+
+    public function map()
+    {
+      $units = DB::table('rooms')
+        ->select('id', 'postcode', 'street', 'housenumber', 'square_meter', 'price')
+          ->get();
+
+      $data = [];
+      foreach ($units as $r) {
         $d[0] = $r->id;
         $d[1] = $r->postcode;
         $d[2] = "<strong>".$r->street." ".$r->housenumber."</strong><br />Oppervlakte: "
