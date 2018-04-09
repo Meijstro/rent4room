@@ -1,4 +1,4 @@
-<h2> @lang('phrases.newRoom')</h2><br>
+<h3> @lang('phrases.newRoom')</h3><br>
 
 <form action="/newroom" method="POST" enctype="multipart/form-data">
   {{ csrf_field() }}

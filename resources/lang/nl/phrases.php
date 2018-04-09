@@ -52,5 +52,24 @@ return [
   'concerningRoom' => 'Betreft de kamer aan',
   'messagePlaceholder' => 'Typ hier je bericht',
   'send' => 'Verstuur',
+	'intro' => 'Ga je studeren in de mooiste studentenstad, schrijf je dan nu <br>
+							gratis in op onze website en vind de woonruimte die bij je past.',
+	'abouttext' => '<p style font-weight="bold">Sinds 2018 is Room4Rent Vastgoed actief op de kamermarkt.
+		Door de hoge vraag van studentenkamers in Groningen is er besloten
+		om uitsluitend te focussen op de kamermarkt in de stad Groningen. Met een team bestaande uit drie mensen
+		wordt er dag en nacht hard gewerkt om aan de wensen van de klant te voldoen. </p>
+
+	<p>Room4Rent onderscheidt zich van andere kameraanbieders door een gerichte doelgroep te kiezen
+		en daarbij lage kosten in rekening te brengen. Wij brengen eenmalig 12,50 in rekening waarmee de klant premium wordt
+		 en zo een kamer kan verhuren of huren. </p>
+
+	<p>We blijven als bedrijf niet stilstaan en investeren in het zoeken
+		 naar potentiele huurder en verhuurders om zo een divers mogelijk
+			aanbod aan te kunnen bieden. </p>
+
+	<p>Dit beleid zetten wij voort! </p>
+
+	<p>Namens het team van Room4Rent wensen wij je veel succes bij het vinden
+		van jou ideale studentenkamer. </p>',
 
 ];
