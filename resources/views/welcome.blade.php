@@ -7,7 +7,7 @@
   @include('layouts.navigatie')
 
   <div class="welcome">
-
+    
     <p>@lang('phrases.intro') </p>
     <a href="/kamers" class="button2">@lang('phrases.roomsCTA')</a>
 
