@@ -40,7 +40,7 @@ class IDealController extends Controller
     if(isset($response)){
       return redirect($response['return']['payment_url']);
     } else {
-      return redirect(env("APP_URL")."/dashboard")
+      return redirect("/dashboard")
         ->with('alert', 'Something went wrong; we have redirected you back.');
     }
 
@@ -54,11 +54,11 @@ class IDealController extends Controller
       User::where('id', Auth::id())
           ->update(['premium' => 1]);
 
-      return redirect(env("APP_URL")."/dashboard")
+      return redirect("/dashboard")
         ->with('success','Account upgrade voltooid!
         Je kan nu van alle functionaliteit van onze site gebruik maken.');
     } else {
-      return redirect(env("APP_URL")."/dashboard")
+      return redirect("/dashboard")
         ->with('alert', 'Something went wrong; Check your bank account.
         If your payment went through but your account hasn\'t upgraded,
         pleaase contact us.');

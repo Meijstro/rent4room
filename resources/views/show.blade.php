@@ -15,7 +15,7 @@
 
               <div>
                 <img class="img-fluid rounded" src="{{asset($photo->filename)}}"
-                alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='/defaultroom.jpg';" />
+                alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='goo.gl/5uVMCa';" />
               </div>
 
             @endforeach
