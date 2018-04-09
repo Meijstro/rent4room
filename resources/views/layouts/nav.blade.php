@@ -4,8 +4,7 @@
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15"
         aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
-          <span><a href="/"><img src="/Room4Rent.png"></a></span>
+<div id="logo"><a href="/"><img src="/Room4Rent.png"></a></div>
 <div>
   <ul id="menu-standard" class="languagepicker roundborders">
 
