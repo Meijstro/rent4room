@@ -10,17 +10,15 @@
   <div class="container">
       <div class="row my-4">
           <div class="col-lg-8">
-            <img class="img-fluid rounded" height="100%" width="100%" src="{{asset($room->photos->first()['filename'])}}"
-            alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='/defaultroom.jpg';" />
 
-              @foreach ($room->photos as $photo)
+            @foreach ($room->photos as $photo)
 
-            <div>
-              <img class="img-fluid rounded" height="20%" width="20%" src="{{asset($room->photos->first()['filename'])}}"
-              alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='/defaultroom.jpg';" />
-            </div>
+              <div>
+                <img class="img-fluid rounded" src="{{asset($photo->filename)}}"
+                alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='/defaultroom.jpg';" />
+              </div>
 
-              @endforeach
+            @endforeach
 
           </div>
 
