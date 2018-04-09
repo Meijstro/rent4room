@@ -7,16 +7,17 @@
 
   <div class="container">
     <div class="panel panel-primary" align="center">
-      <div>@lang('phrases.rooms') <small>({{ $rooms->count() }})</small></div>
+
           <form class="form-wrapper cf" action="{{ url('search') }}" method="get">
             <input name="q" type="text" placeholder="Zoek op straatnaam en/of postcode.." value="{{ request('q') }}">
             <button type="submit">Zoek</button>
           </form>
+          <div>@lang('phrases.rooms') <small>({{ $rooms->count() }}) |</small>
+          <button type="button" class="btn btn-light"><a href="kamers/kaart">Geef kamers weer op kaart</a></button>
+          </div>
       </div>
-      <button type="button" class="btn btn-light">Geef kamers weer op kaart</button>
 
-      <div id="map" style="width: 100%; height:80%; margin-top: 2%;" class="mw-80 hidden">
-      </div><br><hr>
+    <br><hr>
 
     <script>
 $(document).ready(function(){
