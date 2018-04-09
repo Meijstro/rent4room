@@ -56,9 +56,9 @@ class RoomController extends Controller
                 .$r->square_meter."<sup>m2</sup><br />Huur: ".$r->price."<small> € p/m</small";
         $data[] = $d;
       }
-      $units = json_encode($data);
+      $rooms = json_encode($data);
 
-      return view('showall', compact('units'));
+      return view('bigmap', compact('rooms'));
     }
 
 

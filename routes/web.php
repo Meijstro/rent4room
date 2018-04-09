@@ -24,7 +24,7 @@ Route::get('/about', function() {
   return view ('about');
 });
 
-Route::get('/kamers', 'RoomController@showall');
+Route::get('/kamers/kaart', 'RoomController@map');
 
 //registratie, login
 Auth::routes();

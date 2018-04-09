@@ -1,8 +1,24 @@
-<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#map">Zoek op locatie</button>
+@extends('layouts.layout')
+
+@section('content')
+
+  @include('layouts.nav')
+  @include('layouts.navigatie')
+
+  <div class="container">
+      <div class="card-deck">
 
         <div id="map" style="width: 100%; height:80%; margin-top: 2%;" class="mw-80">
         </div>
 
+      </div>
+    </div>
+
+@endsection
+
+@section('footer')
+@include('layouts.footer')
+@endsection
 <script>
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
