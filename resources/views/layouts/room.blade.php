@@ -3,7 +3,7 @@
 
       @if ($room->photos || $room->photos > 0)
         <img class="card-img-top img-fluid"  height="100%" width="100%" src="{{asset($room->photos->first()['filename'])}}"
-        alt="Image not found" onerror="this.onerror=null;this.src='goo.gl/5uVMCa';" />
+        alt="Image not found" onerror="this.onerror=null;this.src='/defaultroom.jpg';" />
       @endif
 
       <div class="card-body">
