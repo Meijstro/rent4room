@@ -29,8 +29,8 @@ class IDealController extends Controller
       "consumer_name" => $user->name,
       "consumer_email" => $user->email,
       "description" => "Room4Rent: Account Upgrade",
-      "cancel_url" => env("APP_URL")."/dashboard",
-      "return_url" => env("APP_URL")."/upgrade/paymentcomplete/".$user->ideal_code,
+      "cancel_url" => url("/dashboard"),
+      "return_url" => url("/upgrade/paymentcomplete/".$user->ideal_code),
       "remarks" => "user_id: ".auth()->id(),
       "test_mode" => true,
     ));

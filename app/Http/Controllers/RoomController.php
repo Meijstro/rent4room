@@ -20,7 +20,7 @@ class RoomController extends Controller
 
     public function index()
     {
-      return view('welcome', compact('rooms'));
+      return view('welcome');
     }
 
     public function showall()
