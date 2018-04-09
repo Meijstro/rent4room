@@ -1,104 +1,70 @@
-@extends('layouts.layout')
-      <title>{{$room->street}}&nbsp;{{$room->housenumber}} op Room4Rent</title>
-      <style>
-      * {box-sizing: border-box}
-      body {font-family: Verdana, sans-serif; margin:0}
-      .mySlides {display: none}
-      img {vertical-align: middle;}
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{csrf_token()}}">
 
-      /* Slideshow container */
-      .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-      }
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('css/style.css') }}" rel="stylesheet">
 
-      /* Next & previous buttons */
-      .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-      }
+        <script src="{{ asset('js/app.js') }}"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
-      /* Position the "next button" to the right */
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
+        <title>{{$room->street}}&nbsp;{{$room->housenumber}} op Room4Rent</title>
+        <style>
+        #slideshow {
+          position:relative;
+          height:350px;
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+          }
 
-      /* On hover, add a black background color with a little bit see-through */
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-      }
+        #slideshow IMG {
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:8;
+          }
 
-      /* Caption text */
-      .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-      }
+        #slideshow IMG.active {
+            z-index:10;
+          }
 
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
+        #slideshow IMG.last-active {
+            z-index:9;
+          }
+          .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 28px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            z-index:19;
+          }
 
-      /* The dots/bullets/indicators */
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
+          /* Position the "next button" to the right */
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
 
-      .active, .dot:hover {
-        background-color: #717171;
-      }
-
-      /* Fading animation */
-      .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-
-      @-webkit-keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-      }
-
-      @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-      }
-
-      /* On smaller screens, decrease text size */
-      @media only screen and (max-width: 300px) {
-        .prev, .next,.text {font-size: 11px}
-      }
-      </style>
-@section('content')
+          /* On hover, add a black background color with a little bit see-through */
+          .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+        </style>
+    </head>
+<body>
 
   @include('layouts.nav')
     @include('layouts.navigatie')
@@ -108,33 +74,23 @@
       <div class="row my-4">
           <div class="col-lg-8">
 
-            <div class="slideshow-container">
+            <div id="slideshow">
 
-              @foreach ($room->photos as $photo)
-
-              <div class="mySlides fade">
-
-                <img class="img-fluid rounded" width="100%" src="{{asset($photo->filename)}}"
-                alt="Foto niet gevonden!" onerror="this.onerror=null;this.src='/defaultroom.jpg';" />
-
-              </div>
-
+              @foreach ($room->photos as $key => $photo)
+                @if ($key == 0)
+                  <img width= "100%" src="{{asset($photo->filename)}}"
+                  alt="{!!asset($photo->filename)!!}" onerror="this.onerror=null;this.src='/defaultroom.jpg';"
+                  class="active"/>
+                @else
+                  <img width= "100%" src="{{asset($photo->filename)}}"
+                  alt="{!!asset($photo->filename)!!}" onerror="this.onerror=null;this.src='/defaultroom.jpg';"
+                  />
+                @endif
               @endforeach
 
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-              </div>
-              <br>
-
-              <div style="text-align:center">
-                @foreach ($room->photos as $key => $value)
-                <span class="dot" onclick="currentSlide({{$key+1}})"></span>
-                @endforeach
-              </div>
-
           </div>
-
+            <h5 class="next" onclick="slideSwitch()">&#10095;</h5>
+        </div>
           <div class="col-lg-4">
                 <h4 class="card-title">{{$room->street}} {{$room->housenumber}}, {{$room->city->name}}<hr></h4>
                 <h5>Grootte: <small>{{$room->square_meter}} m</small><sup>2</sup></h5>
@@ -164,38 +120,24 @@
       </div>
     </div>
   </div>
+  <div class="container">
+      @include('layouts.footer')
+  </div>
+    <script async defer
+    src="//maps.googleapis.com/maps/api/js?key=AIzaSyAN6TE6Vw7wPbgC9-0n2yQIrr9UmrJdVTE&callback=initMap">
+      </script>
+    <script>
+    function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
 
+    var $next =  $active.next().length ? $active.next()
+    : $('#slideshow IMG:first');
 
-@endsection
+    $next.addClass('active');
 
-@section('footer')
-  @include('layouts.footer')
-@endsection
-<script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-</script>
+    $active.removeClass('active');
+    };
+    </script>
+</body>
+</html>
