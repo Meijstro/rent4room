@@ -52,5 +52,7 @@ return [
   'concerningRoom' => 'Betreft de kamer aan',
   'messagePlaceholder' => 'Typ hier je bericht',
   'send' => 'Verstuur',
+	'intro' => 'Ga je studeren in de mooiste studentenstad, schrijf je dan nu <br>
+							gratis in op onze website en vind de woonruimte die bij je past.',
 
 ];

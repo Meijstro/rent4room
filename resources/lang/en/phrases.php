@@ -52,5 +52,8 @@ return [
   'concerningRoom' => 'Concering the room at ',
   'messagePlaceholder' => 'Type your message',
   'send' => 'Send',
+	'intro' => 'Are you going to study in the most beautiful city in the Netherlands. <br>
+							Register now for free and find the room you that suits you most',
+
 
 ];
