@@ -41,6 +41,7 @@ return [
 	'bigmap' => 'View the overview map',
   'updateHREF' => 'Update this room',
   'respond' => 'Respond to this room',
+	'upgradenewuser' =>  'Upgrade your Accout to Premium to use the site.',
   'upgradeCTA' => 'Upgrade your account to respond to this room',
   'loginCTA' => 'log in',
   'or' => 'or',
