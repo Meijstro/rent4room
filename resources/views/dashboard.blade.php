@@ -29,6 +29,8 @@
               </div>
               <div class="card-body">
                 @if (Auth::user()->premium == '0')
+                @lang('phrases.upgradenewuser')<br /><br />
+
                 Upgrade je Account:
                 @include('layouts.upgrade')
                 of<br>

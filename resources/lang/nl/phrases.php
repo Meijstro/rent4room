@@ -41,6 +41,7 @@ return [
 	'bigmap' => 'Bekijk de overzichtskaart',
   'updateHREF' => 'Pas deze kamer aan',
   'respond' => 'Reageer op deze kamer',
+	'upgradenewuser' => 'Upgrade je accout naar Premium om van de site gebruik te maken.',
   'upgradeCTA' => 'Upgrade je account om te kunnen reageren',
   'loginCTA' => 'log in',
   'or' => 'of',
