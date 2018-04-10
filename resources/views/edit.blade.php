@@ -3,7 +3,7 @@
 @section ('content')
 
 <div class="container">
-
+  @include('layouts.alerts')
   <h2> @lang('phrases.editRoom') </h2><br>
 
   <form action="/update/{{$id}}" method="POST" enctype="multipart/form-data">
@@ -23,16 +23,6 @@
       <label for="dateavailable">@lang('phrases.available')</label>
       <input type="text" class="form-control" name="date_available" id="datepicker" value="{{ $room->date_available }}">
     </div>
-
-    <!-- <div class="form-group">
-      <label for="city">Selecteer stad</label> <br>
-      <select name="city_id">
-        <option selected="selected" value="{{$room->city->id}}">{{$room->city->name}}</option>
-        @foreach ($cities as $city)
-          <option value="{{$city->id}}">{{$city->name}}</option>
-        @endforeach
-      </select>
-    </div> -->
 
     <div class="form-group">
       <label for="postcode">Postcode</label>
