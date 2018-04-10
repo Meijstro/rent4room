@@ -50,10 +50,7 @@ class MessageController extends Controller
         $findRoom = Conversation::find($convo)->room_id;
         $room = Room::find($findRoom);
       }
-    if(empty($room) && $userid !== '0'){
-      return redirect('/message/0')
-        ->with('alert', 'Dit gesprek kon niet worden gevonden.');
-    }
+
 
     return view('messages.conversations', compact('messages', 'user', 'convo', 'room'));
     }
